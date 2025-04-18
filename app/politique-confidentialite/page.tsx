@@ -60,9 +60,9 @@ export default function PolitiqueConfidentialite() {
               </p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>Votre consentement</li>
-                <li>L'exécution d'un contrat auquel vous êtes partie</li>
+                <li>L&apos;exécution d&apos;un contrat auquel vous êtes partie</li>
                 <li>Le respect de nos obligations légales</li>
-                <li>Nos intérêts légitimes, à condition qu'ils ne prévalent pas sur vos droits et libertés fondamentaux</li>
+                <li>Nos intérêts légitimes, à condition qu&apos;ils ne prévalent pas sur vos droits et libertés fondamentaux</li>
               </ul>
             </section>
 
@@ -80,7 +80,7 @@ export default function PolitiqueConfidentialite() {
               </p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>Nos sous-traitants et prestataires de services qui agissent pour notre compte</li>
-                <li>Les autorités publiques lorsque la loi l'exige</li>
+                <li>Les autorités publiques lorsque la loi l&apos;exige</li>
               </ul>
             </section>
 
@@ -90,12 +90,12 @@ export default function PolitiqueConfidentialite() {
                 Vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression, de limitation et d&apos;opposition au traitement de vos données personnelles.
               </p>
               <ul className="list-disc pl-6 space-y-3">
-                <li>Droit d'accès à vos données personnelles</li>
+                <li>Droit d&apos;accès à vos données personnelles</li>
                 <li>Droit de rectification des données inexactes</li>
-                <li>Droit à l'effacement de vos données</li>
+                <li>Droit à l&apos;effacement de vos données</li>
                 <li>Droit à la limitation du traitement</li>
                 <li>Droit à la portabilité de vos données</li>
-                <li>Droit d'opposition au traitement</li>
+                <li>Droit d&apos;opposition au traitement</li>
                 <li>Droit de retirer votre consentement à tout moment</li>
               </ul>
             </section>
@@ -104,7 +104,7 @@ export default function PolitiqueConfidentialite() {
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Sécurité des données</h2>
               <p className="mb-4">
                 Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données 
-                personnelles contre la perte, l'accès non autorisé, la divulgation, l'altération et la destruction.
+                personnelles contre la perte, l&apos;accès non autorisé, la divulgation, l&apos;altération et la destruction.
               </p>
             </section>
 
