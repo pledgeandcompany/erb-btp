@@ -17,8 +17,8 @@ const AboutHistory: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative rounded-lg overflow-hidden shadow-xl">
             <Image
-              src="/images/about-history.jpg"
-              alt="Histoire d'ERB-BTP"
+              src="/images/btp4.png"
+              alt="Histoire d&#39;ERB-BTP"
               width={600}
               height={400}
               className="object-cover w-full"
@@ -48,8 +48,8 @@ const AboutHistory: React.FC = () => {
                   <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Expansion</h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 ml-16">
-                  Après 10 ans de succès, l'entreprise s'agrandit et élargit sa gamme de services pour inclure 
-                  la rénovation, l'étanchéité et l'isolation thermique.
+                  Après 10 ans de succès, l&#39;entreprise s&#39;agrandit et élargit sa gamme de services pour inclure 
+                  la rénovation, l&#39;étanchéité et l&#39;isolation thermique.
                 </p>
               </div>
               
@@ -61,8 +61,8 @@ const AboutHistory: React.FC = () => {
                   <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Innovation</h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 ml-16">
-                  ERB-BTP adopte des technologies et matériaux innovants pour offrir des solutions plus durables 
-                  et respectueuses de l'environnement.
+                  Toujours à la pointe de l&#39;innovation, ERB-BTP investit dans les nouvelles technologies pour offrir 
+                  des solutions performantes, durables et respectueuses de l&#39;environnement.
                 </p>
               </div>
               
@@ -71,10 +71,10 @@ const AboutHistory: React.FC = () => {
                   <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
                     2023
                   </div>
-                  <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Aujourd'hui</h3>
+                  <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Aujourd&#39;hui</h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 ml-16">
-                  Aujourd'hui, ERB-BTP est reconnu comme un acteur majeur du secteur, avec une équipe de professionnels 
+                  Aujourd&#39;hui, ERB-BTP est reconnu comme un acteur majeur du secteur, avec une équipe de professionnels 
                   qualifiés et un portefeuille impressionnant de projets réussis.
                 </p>
               </div>

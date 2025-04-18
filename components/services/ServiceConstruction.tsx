@@ -13,7 +13,7 @@ const ServiceConstruction: React.FC = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Construction Neuve</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               ERB-BTP vous accompagne dans tous vos projets de construction neuve, de la conception à la réalisation. 
-              Notre équipe d'experts vous garantit un travail de qualité, respectueux des normes en vigueur et des délais convenus.
+              Notre équipe d&#39;experts vous garantit un travail de qualité, respectueux des normes en vigueur et des délais convenus.
             </p>
             
             <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Nos prestations de construction comprennent :</h3>

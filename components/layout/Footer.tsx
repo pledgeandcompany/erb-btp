@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
-                  Respect de l'environnement
+                  Respect de l&#39;environnement
                 </Link>
               </li>
               <li>
@@ -151,8 +151,8 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-200 dark:border-gray-700 mt-10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-600 dark:text-gray-400 text-sm">
-              {currentYear} ERB-BTP. Tous droits réservés.
+            <p className="text-gray-500 dark:text-gray-400 text-sm">
+              &copy; {currentYear} ERB-BTP. Tous droits réservés. Site réalisé par l&#39;équipe ERB-BTP.
             </p>
             <div className="mt-4 md:mt-0">
               <ul className="flex space-x-6">
@@ -163,7 +163,7 @@ const Footer: React.FC = () => {
                 </li>
                 <li>
                   <Link href="/terms" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white text-sm transition-colors">
-                    Conditions d'utilisation
+                    Conditions d&#39;utilisation
                   </Link>
                 </li>
                 <li>
@@ -175,6 +175,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
+        <p className="text-gray-500 dark:text-gray-400 text-xs mt-2">
+          SIRET : 123 456 789 00012 | TVA : FR12 345678901 | Mentions légales | Politique de confidentialité | Site web réalisé par l&#39;équipe ERB-BTP
+        </p>
       </div>
     </footer>
   );

@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Nos Projets</h2>
             <p className="text-gray-600 dark:text-gray-300">
               Découvrez une sélection de nos projets récents. Chaque projet témoigne de notre engagement 
-              envers la qualité et l'excellence dans tous les aspects de notre travail.
+              envers la qualité et l&#39;excellence dans tous les aspects de notre travail.
             </p>
           </div>
           
@@ -60,7 +60,7 @@ export default function ProjectsPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Ce que disent nos clients</h2>
             <p className="text-gray-600 dark:text-gray-300">
-              La satisfaction de nos clients est notre priorité. Voici ce qu'ils pensent de notre travail.
+              La satisfaction de nos clients est notre priorité. Voici ce qu&#39;ils pensent de notre travail.
             </p>
           </div>
           
@@ -74,12 +74,12 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
-                "ERB-BTP a réalisé la rénovation complète de notre appartement avec un professionnalisme exemplaire. 
-                Le résultat dépasse nos attentes et le chantier a été livré dans les délais prévus."
+                &quot;ERB-BTP a réalisé la rénovation complète de notre appartement avec un professionnalisme exemplaire. 
+                Le résultat dépasse nos attentes et le chantier a été livré dans les délais prévus.&quot;
               </p>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">Marie et Pierre Dupont</p>
-                <p className="text-gray-500 dark:text-gray-400 text-sm">Rénovation d'appartement, Paris</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm">Rénovation d&#39;appartement, Paris</p>
               </div>
             </div>
             
@@ -92,8 +92,8 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
-                "Nous avons fait appel à ERB-BTP pour la construction de nos nouveaux bureaux. Leur expertise 
-                et leur capacité à gérer un projet complexe ont été déterminantes dans la réussite de ce projet."
+                &quot;Nous avons fait appel à ERB-BTP pour la construction de nos nouveaux bureaux. Leur expertise 
+                et leur capacité à gérer un projet complexe ont été déterminantes dans la réussite de ce projet.&quot;
               </p>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">Jean-Marc Leroy</p>
@@ -110,8 +110,8 @@ export default function ProjectsPage() {
                 </div>
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 italic">
-                "L'équipe d'ERB-BTP a fait preuve d'un grand professionnalisme et d'une réactivité exemplaire 
-                tout au long de notre projet de rénovation énergétique. Un grand merci pour la qualité du travail réalisé."
+                &quot;L&#39;équipe d&#39;ERB-BTP a fait preuve d&#39;un grand professionnalisme et d&#39;une réactivité exemplaire 
+                tout au long de notre projet de rénovation énergétique. Un grand merci pour la qualité du travail réalisé.&quot;
               </p>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white">Syndicat de Copropriété Résidence Les Fleurs</p>
@@ -129,7 +129,7 @@ export default function ProjectsPage() {
             Vous avez un projet en tête ?
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
+            Contactez-nous dès aujourd&#39;hui pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="/contact" size="lg">

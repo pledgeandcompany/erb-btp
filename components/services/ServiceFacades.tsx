@@ -12,8 +12,8 @@ const ServiceFacades: React.FC = () => {
           <div className="order-2 lg:order-1">
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Ravalement de Façades</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Le ravalement de façade n'est pas seulement esthétique, c'est aussi une protection essentielle pour votre bâtiment. 
-              Nos équipes qualifiées réalisent des travaux de ravalement complets pour redonner à votre façade son éclat d'origine 
+              Le ravalement de façade n&#39;est pas seulement esthétique, c&#39;est aussi une protection essentielle pour votre bâtiment. 
+              Nos équipes qualifiées réalisent des travaux de ravalement complets pour redonner à votre façade son éclat d&#39;origine 
               tout en la protégeant des agressions extérieures.
             </p>
             
@@ -35,7 +35,7 @@ const ServiceFacades: React.FC = () => {
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-gray-600 dark:text-gray-300">Application d'enduits décoratifs et peintures</span>
+                <span className="text-gray-600 dark:text-gray-300">Application d&#39;enduits décoratifs et peintures</span>
               </li>
               <li className="flex items-start">
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -50,6 +50,10 @@ const ServiceFacades: React.FC = () => {
                 <span className="text-gray-600 dark:text-gray-300">Traitement hydrofuge et anti-mousse</span>
               </li>
             </ul>
+            
+            <p>
+              Nos équipes spécialisées prennent en charge tous les travaux de ravalement de façade, d&#39;isolation thermique par l&#39;extérieur et d&#39;étanchéité, pour redonner à votre bâtiment toute sa splendeur d&#39;origine.
+            </p>
             
             <Button href="/contact" className="mt-2">
               Demander un devis

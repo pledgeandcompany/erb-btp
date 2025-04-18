@@ -24,7 +24,7 @@ const ServiceRenovation: React.FC = () => {
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Rénovation</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Spécialistes de la rénovation, nous transformons vos espaces existants pour leur donner une nouvelle vie. 
-              Qu'il s'agisse d'une rénovation partielle ou complète, nous mettons notre savoir-faire à votre service pour 
+              Qu&#39;il s&#39;agisse d&#39;une rénovation partielle ou complète, nous mettons notre savoir-faire à votre service pour 
               des résultats qui dépasseront vos attentes.
             </p>
             
@@ -34,7 +34,7 @@ const ServiceRenovation: React.FC = () => {
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-gray-600 dark:text-gray-300">Rénovation complète d'appartements et maisons</span>
+                <span className="text-gray-600 dark:text-gray-300">Rénovation complète d&#39;appartements et maisons</span>
               </li>
               <li className="flex items-start">
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,7 +46,7 @@ const ServiceRenovation: React.FC = () => {
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-gray-600 dark:text-gray-300">Réaménagement d'espaces intérieurs</span>
+                <span className="text-gray-600 dark:text-gray-300">Réaménagement d&#39;espaces intérieurs</span>
               </li>
               <li className="flex items-start">
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

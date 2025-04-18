@@ -7,7 +7,7 @@ interface SurfaceStepProps {
     area: number;
     unit: string;
   };
-  onChange: (field: string, value: any) => void;
+  onChange: (field: string, value: number) => void;
 }
 
 const SurfaceStep: React.FC<SurfaceStepProps> = ({ surface, onChange }) => {

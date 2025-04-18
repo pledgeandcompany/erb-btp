@@ -23,12 +23,11 @@ const ServiceIsolation: React.FC = () => {
           <div>
             <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Isolation Thermique</h2>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Une bonne isolation est la clé pour réduire votre consommation énergétique et améliorer votre confort. 
-              Nos solutions d'isolation thermique sont adaptées à tous types de bâtiments et respectent les normes 
+              Nos solutions d&#39;isolation thermique sont adaptées à tous types de bâtiments et respectent les normes 
               environnementales les plus exigeantes.
             </p>
             
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Nos prestations d'isolation incluent :</h3>
+            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Nos prestations d&#39;isolation incluent :</h3>
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,7 +39,7 @@ const ServiceIsolation: React.FC = () => {
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-gray-600 dark:text-gray-300">Isolation des murs par l'intérieur ou l'extérieur</span>
+                <span className="text-gray-600 dark:text-gray-300">Isolation des murs par l&#39;intérieur ou l&#39;extérieur</span>
               </li>
               <li className="flex items-start">
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,7 +57,7 @@ const ServiceIsolation: React.FC = () => {
                 <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-gray-600 dark:text-gray-300">Éligibilité aux aides financières et crédits d'impôt</span>
+                <span className="text-gray-600 dark:text-gray-300">Éligibilité aux aides financières et crédits d&#39;impôt</span>
               </li>
             </ul>
             

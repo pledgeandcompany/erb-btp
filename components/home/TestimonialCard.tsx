@@ -24,7 +24,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           <p className="text-gray-500 dark:text-gray-400 text-sm">{role}</p>
         </div>
       </div>
-      <p className="text-gray-700 dark:text-gray-300">"{testimonial}"</p>
+      <p className="text-gray-700 dark:text-gray-300 italic">
+        &quot;{testimonial}&quot;
+      </p>
     </div>
   );
 };

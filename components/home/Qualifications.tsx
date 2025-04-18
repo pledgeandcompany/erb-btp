@@ -42,7 +42,7 @@ const Qualifications: React.FC = () => {
     },
     {
       code: '7131',
-      description: 'Isolation thermique par l\'extérieur (Technicité courante)',
+      description: 'Isolation thermique par l&#39;extérieur (Technicité courante)',
       dateAttribution: '08/02/2023'
     }
   ];
@@ -69,7 +69,7 @@ const Qualifications: React.FC = () => {
                     Qualification(s) en cours de validité
                   </th>
                   <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                    Date d'attribution
+                    Date d&#39;attribution
                   </th>
                 </tr>
               </thead>

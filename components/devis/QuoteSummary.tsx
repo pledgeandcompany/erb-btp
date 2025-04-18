@@ -31,7 +31,6 @@ interface QuoteSummaryProps {
   estimatedPrice: number;
   onSubmit: (e: React.FormEvent) => void;
   isSubmitting: boolean;
-  submitSuccess: boolean;
   submitError: string;
 }
 
@@ -40,7 +39,6 @@ const QuoteSummary: React.FC<QuoteSummaryProps> = ({
   estimatedPrice, 
   onSubmit, 
   isSubmitting, 
-  submitSuccess, 
   submitError 
 }) => {
   const [termsAccepted, setTermsAccepted] = useState(false);
@@ -116,14 +114,14 @@ const QuoteSummary: React.FC<QuoteSummaryProps> = ({
             {formatPrice(minPrice)} € - {formatPrice(maxPrice)} €
           </div>
           <p className="text-xs text-yellow-700 dark:text-yellow-400 mb-4">
-            Cette estimation est donnée à titre indicatif et pourra être affinée lors de l'étude détaillée de votre projet.
+            Cette estimation est donnée à titre indicatif et pourra être affinée lors de l&#39;étude détaillée de votre projet.
           </p>
         </div>
         <div className="bg-white dark:bg-gray-800 p-3 rounded-md">
           <p className="text-sm text-gray-600 dark:text-gray-300">
             <span className="font-medium">Note :</span> Cette estimation est basée sur une surface de {formData.surface.area} m² 
             et des matériaux de qualité {formData.materials.length > 0 ? getReadableName(formData.materials[0], 'materials') : 'standard'}.
-            Le prix final dépendra d'une étude approfondie de votre projet et pourra varier en fonction de contraintes spécifiques.
+            Le prix final dépendra d&#39;une étude approfondie de votre projet et pourra varier en fonction de contraintes spécifiques.
           </p>
         </div>
       </div>
@@ -242,8 +240,8 @@ const QuoteSummary: React.FC<QuoteSummaryProps> = ({
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="terms" className="text-gray-600 dark:text-gray-300">
-              J'accepte que mes données soient utilisées pour me contacter au sujet de ma demande de devis. 
-              J'ai lu et j'accepte les <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:underline">conditions générales</a> et la <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:underline">politique de confidentialité</a>.
+              J&#39;accepte que mes données soient utilisées pour me contacter au sujet de ma demande de devis. 
+              J&#39;ai lu et j&#39;accepte les <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:underline">conditions générales</a> et la <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:underline">politique de confidentialité</a>.
             </label>
           </div>
         </div>

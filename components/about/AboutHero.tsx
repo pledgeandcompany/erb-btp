@@ -15,18 +15,18 @@ const AboutHero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              À propos <span className="text-yellow-500">d'ERB-BTP</span>
+              À propos <span className="text-yellow-500">d&#39;ERB-BTP</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-2xl">
-              Depuis plus de 25 ans, ERB-BTP s'est imposé comme un acteur incontournable du secteur de la construction 
-              et de la rénovation en Île-de-France. Notre engagement envers l'excellence et la satisfaction client 
+              Depuis plus de 25 ans, ERB-BTP s&#39;est imposé comme un acteur incontournable du secteur de la construction 
+              et de la rénovation en Île-de-France. Notre engagement envers l&#39;excellence et la satisfaction client 
               a fait notre réputation.
             </p>
             
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
                 <span className="text-yellow-500 font-bold text-2xl mr-2">25+</span>
-                <span className="text-gray-700 dark:text-gray-300">Années d'expérience</span>
+                <span className="text-gray-700 dark:text-gray-300">Années d&#39;expérience</span>
               </div>
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
                 <span className="text-yellow-500 font-bold text-2xl mr-2">500+</span>
@@ -42,7 +42,7 @@ const AboutHero: React.FC = () => {
           <div className="relative">
             <div className="relative rounded-lg shadow-xl overflow-hidden h-[400px] md:h-[500px]">
               <Image
-                src="/images/about-hero.jpg"
+                src="/images/btp5.png"
                 alt="ERB-BTP équipe"
                 fill
                 className="object-cover"

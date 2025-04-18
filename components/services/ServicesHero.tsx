@@ -20,7 +20,7 @@ const ServicesHero: React.FC = () => {
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-2xl">
               ERB-BTP vous propose une gamme complète de services pour tous vos projets de construction et rénovation. 
-              Notre équipe d'experts met son savoir-faire à votre service pour des réalisations de qualité.
+              Notre équipe d&#39;experts met son savoir-faire à votre service pour des réalisations de qualité.
             </p>
             
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
@@ -61,7 +61,7 @@ const ServicesHero: React.FC = () => {
             
             <div className="absolute -bottom-6 -left-6 bg-yellow-500 text-white p-6 rounded-lg shadow-lg max-w-xs">
               <p className="text-lg font-bold mb-2">Experts en construction depuis 1995</p>
-              <p className="text-sm">Plus de 25 ans d'expérience à votre service pour des projets de qualité.</p>
+              <p className="text-sm">Plus de 25 ans d&#39;expérience à votre service pour des projets de qualité.</p>
             </div>
           </div>
         </div>

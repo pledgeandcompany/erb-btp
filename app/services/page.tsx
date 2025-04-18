@@ -84,7 +84,7 @@ export default function ServicesPage() {
             Prêt à démarrer votre projet ?
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
+            Contactez-nous dès aujourd&#39;hui pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="/contact" size="lg">

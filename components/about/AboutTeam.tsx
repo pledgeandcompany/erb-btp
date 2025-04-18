@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React from 'next/link';
 import Image from 'next/image';
 
 interface TeamMember {
@@ -13,9 +13,9 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: 'Ali Tombari',
-    role: 'Chargé d\'affaire',
+    role: 'Chargé d&#39;affaire',
     image: '/images/team-1.jpg',
-    bio: 'Avec plus de 20 ans d\'expérience dans le secteur de la construction, Ali dirige ERB-BTP avec passion et expertise. Il supervise personnellement chaque projet pour garantir la satisfaction des clients.'
+    bio: 'Avec plus de 20 ans d&#39;expérience dans le secteur de la construction, Ali dirige ERB-BTP avec passion et expertise. Il supervise personnellement chaque projet pour garantir la satisfaction des clients.'
   },
   {
     name: 'Sophie Martin',
@@ -27,13 +27,13 @@ const teamMembers: TeamMember[] = [
     name: 'Marc Dubois',
     role: 'Chef de Chantier',
     image: '/images/team-3.jpg',
-    bio: 'Fort de ses 15 années d\'expérience sur le terrain, Marc coordonne nos équipes de chantier avec efficacité. Son sens de l\'organisation garantit le respect des délais et des budgets.'
+    bio: 'Fort de ses 15 années d&#39;expérience sur le terrain, Marc coordonne nos équipes de chantier avec efficacité. Son sens de l&#39;organisation garantit le respect des délais et des budgets.'
   },
   {
     name: 'Nadia Benali',
     role: 'Responsable Administrative',
     image: '/images/team-4.jpg',
-    bio: 'Nadia gère l\'administration et les finances d\'ERB-BTP. Sa rigueur et son professionnalisme assurent le bon fonctionnement quotidien de l\'entreprise.'
+    bio: 'Nadia gère l&#39;administration et les finances d&#39;ERB-BTP. Sa rigueur et son professionnalisme assurent le bon fonctionnement quotidien de l&#39;entreprise.'
   }
 ];
 
@@ -44,7 +44,7 @@ const AboutTeam: React.FC = () => {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Notre Équipe</h2>
           <p className="text-gray-600 dark:text-gray-300">
-            Rencontrez les professionnels passionnés qui font d'ERB-BTP une entreprise d'excellence.
+            Rencontrez les professionnels passionnés qui font d&#39;ERB-BTP une entreprise d&#39;excellence.
           </p>
         </div>
         
@@ -72,7 +72,7 @@ const AboutTeam: React.FC = () => {
           <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white text-center">Rejoignez Notre Équipe</h3>
           <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
             Nous sommes toujours à la recherche de talents passionnés pour rejoindre notre équipe. 
-            Si vous êtes motivé, rigoureux et que vous partagez nos valeurs, n'hésitez pas à nous contacter.
+            Si vous êtes motivé, rigoureux et que vous partagez nos valeurs, n&#39;hésitez pas à nous contacter.
           </p>
           <div className="text-center">
             <a 

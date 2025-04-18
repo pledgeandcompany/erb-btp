@@ -75,7 +75,7 @@ const DevisForm: React.FC = () => {
   // Calculate estimated price whenever relevant form data changes
   useEffect(() => {
     if (formData.serviceType && formData.surface.area > 0) {
-      let basePrice = BASE_PRICING[formData.serviceType as keyof typeof BASE_PRICING] || 0;
+      const basePrice = BASE_PRICING[formData.serviceType as keyof typeof BASE_PRICING] || 0;
       let materialMultiplier = 1.0;
       
       // Apply material multiplier if selected
@@ -91,7 +91,7 @@ const DevisForm: React.FC = () => {
   }, [formData.serviceType, formData.surface.area, formData.materials]);
 
   // Handle form data updates
-  const updateFormData = (field: string, value: any) => {
+  const updateFormData = (field: string, value: unknown) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -99,14 +99,18 @@ const DevisForm: React.FC = () => {
   };
 
   // Handle nested form data updates
-  const updateNestedFormData = (parent: string, field: string, value: any) => {
-    setFormData(prev => ({
-      ...prev,
-      [parent]: {
-        ...prev[parent as keyof typeof prev],
-        [field]: value
-      }
-    }));
+  const updateNestedFormData = (parent: string, field: string, value: unknown) => {
+    setFormData(prev => {
+      const parentValue = prev[parent as keyof typeof prev];
+      const isObject = parentValue && typeof parentValue === 'object' && !Array.isArray(parentValue);
+      return {
+        ...prev,
+        [parent]: {
+          ...(isObject ? parentValue : {}),
+          [field]: value,
+        }
+      };
+    });
   };
 
   // Navigate to next step
@@ -130,8 +134,8 @@ const DevisForm: React.FC = () => {
       // For now, we'll simulate a successful submission after a delay
       await new Promise(resolve => setTimeout(resolve, 1500));
       setSubmitSuccess(true);
-    } catch (error) {
-      setSubmitError('Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.');
+    } catch {
+      setSubmitError('Une erreur est survenue lors de l&#39;envoi du formulaire. Veuillez réessayer.');
     } finally {
       setIsSubmitting(false);
     }
@@ -199,7 +203,6 @@ const DevisForm: React.FC = () => {
             estimatedPrice={estimatedPrice} 
             onSubmit={handleSubmit}
             isSubmitting={isSubmitting}
-            submitSuccess={submitSuccess}
             submitError={submitError}
           />
         );
@@ -228,7 +231,7 @@ const DevisForm: React.FC = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="/" variant="outline">
-              Retour à l'accueil
+              Retour à l&#39;accueil
             </Button>
             <Button onClick={resetForm}>
               Nouvelle demande

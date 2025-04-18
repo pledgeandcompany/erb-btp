@@ -6,7 +6,7 @@ import SectionTitle from '@/components/ui/SectionTitle';
 
 export const metadata = {
   title: 'Contact | ERB-BTP Construction et Rénovation',
-  description: 'Contactez ERB-BTP pour tous vos projets de construction et rénovation. Demandez un devis gratuit ou obtenez plus d\'informations sur nos services.',
+  description: 'Contactez ERB-BTP pour tous vos projets de construction et rénovation. Demandez un devis gratuit ou obtenez plus d&#39;informations sur nos services.',
 };
 
 export default function ContactPage() {
@@ -64,21 +64,21 @@ export default function ContactPage() {
               <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Quelles zones géographiques couvrez-vous ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Nous intervenons principalement à Paris et en Île-de-France. N'hésitez pas à nous contacter pour vérifier si nous pouvons intervenir dans votre région.
+                  Nous intervenons principalement à Paris et en Île-de-France. N&#39;hésitez pas à nous contacter pour vérifier si nous pouvons intervenir dans votre région.
                 </p>
               </div>
               
               <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Quels types de projets prenez-vous en charge ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Nous prenons en charge tous types de projets de construction et rénovation, qu'il s'agisse de travaux résidentiels, commerciaux ou industriels. Consultez notre page Services pour plus de détails.
+                  Nous prenons en charge tous types de projets de construction et rénovation, qu&#39;il s&#39;agisse de travaux résidentiels, commerciaux ou industriels. Consultez notre page Services pour plus de détails.
                 </p>
               </div>
               
               <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Quelles sont vos garanties ?</h3>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Tous nos travaux sont garantis conformément à la législation en vigueur. Nous offrons une garantie décennale pour les gros œuvres et une garantie biennale pour les éléments d'équipement.
+                  Tous nos travaux sont garantis conformément à la législation en vigueur. Nous offrons une garantie décennale pour les gros œuvres et une garantie biennale pour les éléments d&#39;équipement.
                 </p>
               </div>
             </div>
@@ -92,8 +92,8 @@ export default function ContactPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Prêt à démarrer votre projet ?
           </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            Vous avez un projet ou une question ? N&#39;hésitez pas à nous contacter, nous vous répondrons dans les plus brefs délais.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 

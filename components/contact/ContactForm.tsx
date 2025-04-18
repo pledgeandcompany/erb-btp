@@ -136,7 +136,7 @@ const ContactForm: React.FC = () => {
             >
               <option value="">Sélectionnez un sujet</option>
               <option value="devis">Demande de devis</option>
-              <option value="information">Demande d'information</option>
+              <option value="information">Demande d&#39;information</option>
               <option value="reclamation">Réclamation</option>
               <option value="autre">Autre</option>
             </select>

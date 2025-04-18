@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/Button';
 
 export const metadata = {
   title: 'À propos | ERB-BTP Construction et Rénovation',
-  description: 'Découvrez l\'histoire, les valeurs et l\'équipe d\'ERB-BTP, votre partenaire de confiance pour tous vos projets de construction et rénovation depuis 1995.',
+  description: 'Découvrez l&#39;histoire, les valeurs et l&#39;équipe d&#39;ERB-BTP, votre partenaire de confiance pour tous vos projets de construction et rénovation depuis 1995.',
 };
 
 export default function AboutPage() {
@@ -32,7 +32,7 @@ export default function AboutPage() {
             Prêt à travailler avec nous ?
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment ERB-BTP peut vous aider à le réaliser.
+            Contactez-nous dès aujourd&#39;hui pour discuter de votre projet et découvrir comment ERB-BTP peut vous aider à le réaliser.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button href="/contact" size="lg">

@@ -139,7 +139,7 @@ const ContactInfoStep: React.FC<ContactInfoStepProps> = ({ contactInfo, onChange
           <div className="ml-3">
             <p className="text-sm text-gray-600 dark:text-gray-300">
               Vos données personnelles sont utilisées uniquement pour vous contacter au sujet de votre devis. 
-              Elles ne seront jamais partagées avec des tiers. Les champs marqués d'un * sont obligatoires.
+              Elles ne seront jamais partagées avec des tiers. Les champs marqués d&#39;un * sont obligatoires.
             </p>
           </div>
         </div>

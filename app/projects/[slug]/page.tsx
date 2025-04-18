@@ -20,14 +20,14 @@ export default function ProjectDetailPage() {
       <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-800 px-4">
         <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Projet non trouvé</h1>
         <p className="text-gray-600 dark:text-gray-300 mb-8 text-center max-w-md">
-          Désolé, le projet que vous recherchez n'existe pas ou a été déplacé.
+          Désolé, le projet que vous recherchez n&#39;existe pas ou a été déplacé.
         </p>
         <div className="flex gap-4">
           <Button href="/projects" variant="default">
             Voir tous les projets
           </Button>
           <Button href="/" variant="outline" className="border-gray-800 text-gray-800 hover:bg-gray-100 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-800">
-            Retour à l'accueil
+            Retour à l&#39;accueil
           </Button>
         </div>
       </div>
@@ -62,7 +62,7 @@ export default function ProjectDetailPage() {
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Projets similaires</h2>
             <p className="text-gray-600 dark:text-gray-300">
-              Découvrez d'autres projets dans la même catégorie.
+              Découvrez d&#39;autres projets dans la même catégorie.
             </p>
           </div>
           

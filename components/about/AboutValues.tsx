@@ -75,7 +75,7 @@ const AboutValues: React.FC = () => {
             <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Responsabilité</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Nous assumons la responsabilité de notre travail et nous nous engageons à résoudre rapidement tout problème 
-              qui pourrait survenir pendant ou après la réalisation d'un projet.
+              qui pourrait survenir pendant ou après la réalisation d&#39;un projet.
             </p>
           </div>
           
@@ -88,7 +88,7 @@ const AboutValues: React.FC = () => {
             <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Durabilité</h3>
             <p className="text-gray-600 dark:text-gray-300">
               Nous nous efforçons de minimiser notre impact environnemental en utilisant des matériaux durables et 
-              des pratiques respectueuses de l'environnement dans tous nos projets.
+              des pratiques respectueuses de l&#39;environnement dans tous nos projets.
             </p>
           </div>
         </div>
