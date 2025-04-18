@@ -246,9 +246,9 @@ const DevisForm: React.FC = () => {
   const progress = Math.round((currentStep / STEPS.SUMMARY) * 100);
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8">
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-0">
       {/* Progress bar */}
-      <div className="mb-8">
+      <div className="mb-0">
         <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
           <div 
             className="h-full bg-yellow-500 transition-all duration-300 ease-in-out" 
@@ -263,7 +263,7 @@ const DevisForm: React.FC = () => {
       </div>
 
       {/* Step content */}
-      <div className="mb-8">
+      <div className="mb-8 min-h-[300px]">
         {renderStep()}
       </div>
 

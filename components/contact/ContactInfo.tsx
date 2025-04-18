@@ -63,18 +63,6 @@ const ContactInfo: React.FC = () => {
         <div className="flex items-start">
           <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-3">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-            </svg>
-          </div>
-          <div>
-            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Site Web</h5>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">http://www.erb-btp.fr</p>
-          </div>
-        </div>
-        
-        <div className="flex items-start">
-          <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-3">
-            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>

@@ -52,7 +52,7 @@ const ServicesHero: React.FC = () => {
           <div className="relative">
             <div className="relative rounded-lg shadow-xl overflow-hidden h-[400px] md:h-[500px]">
               <Image
-                src="/images/services/services-hero.jpg"
+                src="/images/btp2.png"
                 alt="Services ERB-BTP"
                 fill
                 className="object-cover"

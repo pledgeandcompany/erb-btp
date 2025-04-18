@@ -13,59 +13,59 @@ export default function Home() {
       title: "Maçonnerie générale",
       description: "Construction de murs, fondations, et structures en béton armé pour tous types de bâtiments.",
       icon: "🏗️",
-      href: "/services/maconnerie-generale",
+      href: "/services#construction",
     },
     {
       title: "Rénovation",
       description: "Rénovation complète ou partielle de bâtiments résidentiels et commerciaux.",
       icon: "🔨",
-      href: "/services/renovation",
+      href: "/services#renovation",
     },
     {
       title: "Gros œuvre",
       description: "Réalisation de l'ensemble des travaux de structure et d'enveloppe du bâtiment.",
       icon: "🏢",
-      href: "/services/gros-oeuvre",
+      href: "/services#construction",
     },
     {
       title: "Aménagement extérieur",
       description: "Création de terrasses, allées, et aménagements paysagers pour valoriser votre propriété.",
       icon: "🌳",
-      href: "/services/amenagement-exterieur",
+      href: "/services#exterieur",
     },
     {
       title: "Isolation thermique",
       description: "Solutions d'isolation performantes pour améliorer l'efficacité énergétique de votre bâtiment.",
       icon: "❄️",
-      href: "/services/isolation-thermique",
+      href: "/services#isolation",
     },
     {
       title: "Étanchéité",
       description: "Travaux d'étanchéité pour toitures, terrasses et fondations contre les infiltrations d'eau.",
       icon: "💧",
-      href: "/services/etancheite",
+      href: "/services#etancheite",
     },
   ];
 
   // Projects data
   const projects = [
     {
-      title: "Résidence Les Oliviers",
-      category: "Construction neuve",
-      imageSrc: "/images/project1.jpg",
-      href: "/projets/residence-les-oliviers",
+      title: "Résidence Mont d'Eaubonne",
+      category: "Résidentiel",
+      description: "Réfection d'étanchéité avec amélioration énergétique sur 10 bâtiments",
+      href: "/projects/residence-mont-eaubonne",
     },
     {
-      title: "Rénovation Haussmannienne",
-      category: "Rénovation",
-      imageSrc: "/images/project2.jpg",
-      href: "/projets/renovation-haussmannienne",
+      title: "Centre Commercial Belle Epine",
+      category: "Commercial",
+      description: "Réfection des commandes de désenfumages des galeries marchandes",
+      href: "/projects/centre-commercial-belle-epine",
     },
     {
-      title: "Centre Commercial Atlantis",
-      category: "Bâtiment commercial",
-      imageSrc: "/images/project3.jpg",
-      href: "/projets/centre-commercial-atlantis",
+      title: "Résidence Les Roitelets",
+      category: "Résidentiel",
+      description: "Réfection de 6 000 m² de complexe iso/étanche et 1 300 ml de garde-corps",
+      href: "/projects/residence-les-roitelets",
     },
   ];
 
@@ -140,7 +140,7 @@ export default function Home() {
                 key={index}
                 title={project.title}
                 category={project.category}
-                imageSrc={project.imageSrc}
+                description={project.description}
                 href={project.href}
               />
             ))}

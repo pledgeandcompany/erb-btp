@@ -41,7 +41,7 @@ const ProjectsHero: React.FC = () => {
           <div className="relative">
             <div className="relative rounded-lg shadow-xl overflow-hidden h-[400px] md:h-[500px]">
               <Image
-                src="/images/projects/projects-hero.jpg"
+                src="/images/btp1.png"
                 alt="Projets ERB-BTP"
                 fill
                 className="object-cover"

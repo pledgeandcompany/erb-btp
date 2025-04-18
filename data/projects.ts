@@ -5,207 +5,226 @@ import { ProjectCaseStudyProps } from '@/components/projects/ProjectCaseStudy';
 export const projectsList: ProjectItem[] = [
   {
     id: '1',
-    title: 'Résidence Les Ormes',
+    title: 'Résidence Mont d\'Eaubonne',
     category: 'Résidentiel',
-    location: 'Paris, France',
-    year: '2023',
-    imageSrc: '/images/projects/project1.jpg',
-    slug: 'residence-les-ormes'
+    location: 'Eaubonne, France',
+    year: '2024',
+    slug: 'residence-mont-eaubonne'
   },
   {
     id: '2',
-    title: 'Centre Commercial Étoile',
-    category: 'Commercial',
-    location: 'Lyon, France',
-    year: '2022',
-    imageSrc: '/images/projects/project2.jpg',
-    slug: 'centre-commercial-etoile'
+    title: 'Résidence La Briche',
+    category: 'Résidentiel',
+    location: 'Epinay-sur-Seine, France',
+    year: '2024',
+    slug: 'residence-la-briche'
   },
   {
     id: '3',
-    title: 'Rénovation Haussmannienne',
-    category: 'Rénovation',
-    location: 'Paris, France',
-    year: '2022',
-    imageSrc: '/images/projects/project3.jpg',
-    slug: 'renovation-haussmannienne'
+    title: 'Résidence Toit et Joie',
+    category: 'Résidentiel',
+    location: 'Poissy, France',
+    year: '2024',
+    slug: 'residence-toit-joie-poissy'
   },
   {
     id: '4',
-    title: 'Immeuble de Bureaux Horizon',
-    category: 'Commercial',
-    location: 'Marseille, France',
-    year: '2021',
-    imageSrc: '/images/projects/project4.jpg',
-    slug: 'immeuble-bureaux-horizon'
+    title: 'Club House Tennis',
+    category: 'Public',
+    location: 'Paris, France',
+    year: '2024',
+    slug: 'club-house-tennis-paris'
   },
   {
     id: '5',
-    title: 'Villa Méditerranée',
-    category: 'Résidentiel',
-    location: 'Nice, France',
-    year: '2021',
-    imageSrc: '/images/projects/project5.jpg',
-    slug: 'villa-mediterranee'
+    title: 'Atelier Radiguet',
+    category: 'Public',
+    location: 'Paris, France',
+    year: '2024',
+    slug: 'atelier-radiguet'
   },
   {
     id: '6',
-    title: 'Rénovation Énergétique Collectif',
-    category: 'Rénovation',
-    location: 'Lille, France',
-    year: '2020',
-    imageSrc: '/images/projects/project6.jpg',
-    slug: 'renovation-energetique-collectif'
+    title: 'Résidence Hipolyte Pascal',
+    category: 'Résidentiel',
+    location: 'Paris, France',
+    year: '2023',
+    slug: 'residence-hipolyte-pascal'
   },
   {
     id: '7',
-    title: 'Complexe Sportif Municipal',
-    category: 'Public',
-    location: 'Bordeaux, France',
-    year: '2020',
-    imageSrc: '/images/projects/project7.jpg',
-    slug: 'complexe-sportif-municipal'
+    title: 'Résidence Le Petit Bois',
+    category: 'Résidentiel',
+    location: 'Chaville, France',
+    year: '2023',
+    slug: 'residence-petit-bois'
   },
   {
     id: '8',
-    title: 'Réhabilitation Ancienne Usine',
-    category: 'Industriel',
-    location: 'Nantes, France',
-    year: '2019',
-    imageSrc: '/images/projects/project8.jpg',
-    slug: 'rehabilitation-ancienne-usine'
+    title: 'Centre Commercial Belle Epine',
+    category: 'Commercial',
+    location: 'Thiais, France',
+    year: '2023',
+    slug: 'centre-commercial-belle-epine'
   },
   {
     id: '9',
-    title: 'Résidence Seniors Les Tilleuls',
+    title: 'Résidence Les Roitelets',
     category: 'Résidentiel',
-    location: 'Strasbourg, France',
-    year: '2019',
-    imageSrc: '/images/projects/project9.jpg',
-    slug: 'residence-seniors-tilleuls'
+    location: 'Paris, France',
+    year: '2023',
+    slug: 'residence-les-roitelets'
+  },
+  {
+    id: '10',
+    title: 'Résidence Quai de Stalingrad',
+    category: 'Résidentiel',
+    location: 'Boulogne-Billancourt, France',
+    year: '2023',
+    slug: 'residence-quai-stalingrad'
+  },
+  {
+    id: '11',
+    title: 'Quartier des Beaudottes',
+    category: 'Résidentiel',
+    location: 'Sevran, France',
+    year: '2022',
+    slug: 'quartier-beaudottes'
+  },
+  {
+    id: '12',
+    title: 'Résidence Claude Bonnet',
+    category: 'Résidentiel',
+    location: 'Cachan, France',
+    year: '2022',
+    slug: 'residence-claude-bonnet'
   }
 ];
-
-// Detailed case studies for individual project pages
-export const projectsDetails: Record<string, ProjectCaseStudyProps> = {
-  'residence-les-ormes': {
-    id: '1',
-    title: 'Résidence Les Ormes',
-    location: 'Paris, France',
-    category: 'Résidentiel',
-    year: '2023',
-    duration: '18 mois',
-    client: 'Groupe Immobilier Parisien',
-    description: 'Construction d\'un ensemble résidentiel de 45 appartements haut de gamme répartis sur 6 étages, avec parking souterrain et espaces verts communs. Le projet a été conçu pour s\'intégrer harmonieusement dans le quartier tout en offrant un confort moderne et une efficacité énergétique optimale.',
-    challenges: [
-      'Terrain exigu en milieu urbain dense',
-      'Contraintes architecturales strictes liées au plan local d\'urbanisme',
-      'Exigences élevées en matière de performance énergétique',
-      'Délai de livraison serré'
-    ],
-    solutions: [
-      'Utilisation de techniques de construction modulaire pour optimiser le temps de chantier',
-      'Collaboration étroite avec les architectes et les autorités locales pour respecter les contraintes urbanistiques',
-      'Mise en œuvre de solutions d\'isolation thermique et acoustique de pointe',
-      'Planification rigoureuse et coordination efficace des différents corps de métier'
-    ],
-    results: [
-      'Livraison du projet dans les délais impartis',
-      'Obtention de la certification BBC (Bâtiment Basse Consommation)',
-      'Satisfaction des futurs résidents lors des visites pré-livraison',
-      'Intégration réussie dans le paysage urbain existant'
-    ],
-    imageSrc: '/images/projects/project1.jpg',
-    galleryImages: [
-      '/images/projects/project1-gallery1.jpg',
-      '/images/projects/project1-gallery2.jpg',
-      '/images/projects/project1-gallery3.jpg',
-      '/images/projects/project1-gallery4.jpg',
-      '/images/projects/project1-gallery5.jpg',
-      '/images/projects/project1-gallery6.jpg'
-    ]
-  },
-  'centre-commercial-etoile': {
-    id: '2',
-    title: 'Centre Commercial Étoile',
-    location: 'Lyon, France',
-    category: 'Commercial',
-    year: '2022',
-    duration: '24 mois',
-    client: 'Développement Commercial Rhône',
-    description: 'Construction d\'un centre commercial de 25 000 m² comprenant 60 boutiques, un hypermarché, des restaurants et un parking de 800 places. Le projet visait à créer un lieu de shopping moderne et attractif tout en respectant des normes environnementales strictes.',
-    challenges: [
-      'Gestion d\'un chantier de grande envergure',
-      'Coordination de nombreux intervenants et sous-traitants',
-      'Respect des normes de sécurité pour les établissements recevant du public',
-      'Intégration de technologies intelligentes pour la gestion du bâtiment'
-    ],
-    solutions: [
-      'Mise en place d\'une équipe dédiée à la gestion du projet avec des réunions hebdomadaires',
-      'Utilisation d\'un logiciel BIM pour optimiser la coordination entre les différents corps de métier',
-      'Collaboration avec des experts en sécurité dès la phase de conception',
-      'Installation de systèmes de gestion technique centralisée pour optimiser la consommation énergétique'
-    ],
-    results: [
-      'Ouverture du centre commercial selon le calendrier prévu',
-      'Obtention de la certification BREEAM Excellent pour la performance environnementale',
-      'Taux d\'occupation des espaces commerciaux de 95% à l\'ouverture',
-      'Réduction de 30% de la consommation énergétique par rapport aux standards du secteur'
-    ],
-    imageSrc: '/images/projects/project2.jpg',
-    galleryImages: [
-      '/images/projects/project2-gallery1.jpg',
-      '/images/projects/project2-gallery2.jpg',
-      '/images/projects/project2-gallery3.jpg',
-      '/images/projects/project2-gallery4.jpg',
-      '/images/projects/project2-gallery5.jpg',
-      '/images/projects/project2-gallery6.jpg'
-    ]
-  },
-  'renovation-haussmannienne': {
-    id: '3',
-    title: 'Rénovation Haussmannienne',
-    location: 'Paris, France',
-    category: 'Rénovation',
-    year: '2022',
-    duration: '12 mois',
-    client: 'SCI Patrimoine Parisien',
-    description: 'Rénovation complète d\'un immeuble haussmannien du 8ème arrondissement de Paris, comprenant la restauration des façades, la rénovation des parties communes et la restructuration de 8 appartements de prestige tout en préservant les éléments architecturaux d\'origine.',
-    challenges: [
-      'Préservation des éléments patrimoniaux (moulures, parquets, cheminées)',
-      'Mise aux normes techniques tout en respectant l\'architecture d\'origine',
-      'Travaux en site occupé pour certains appartements',
-      'Contraintes logistiques liées à la situation en centre-ville'
-    ],
-    solutions: [
-      'Collaboration avec des artisans spécialisés dans la restauration du patrimoine',
-      'Intégration discrète des nouvelles technologies et normes de sécurité',
-      'Planification minutieuse des interventions pour minimiser les nuisances',
-      'Organisation logistique adaptée aux contraintes urbaines'
-    ],
-    results: [
-      'Restauration fidèle des éléments patrimoniaux',
-      'Modernisation réussie des équipements et installations techniques',
-      'Valorisation significative du bien immobilier',
-      'Satisfaction des propriétaires et des occupants'
-    ],
-    imageSrc: '/images/projects/project3.jpg',
-    galleryImages: [
-      '/images/projects/project3-gallery1.jpg',
-      '/images/projects/project3-gallery2.jpg',
-      '/images/projects/project3-gallery3.jpg',
-      '/images/projects/project3-gallery4.jpg',
-      '/images/projects/project3-gallery5.jpg',
-      '/images/projects/project3-gallery6.jpg'
-    ]
-  }
-};
 
 // Categories for filtering
 export const projectCategories = [
   'Résidentiel',
   'Commercial',
-  'Rénovation',
   'Public',
-  'Industriel'
+  'Rénovation',
+  'Industriel',
+  'Tous'
 ];
+
+// Project details for case studies
+export const projectsDetails: Record<string, ProjectCaseStudyProps> = {
+  'residence-mont-eaubonne': {
+    id: '1',
+    title: 'Résidence du Mont d\'Eaubonne',
+    location: 'Eaubonne, France',
+    category: 'Résidentiel',
+    year: '2024',
+    client: 'NEXITY COLOMBES',
+    duration: '6 mois',
+    imageSrc: '/images/projects/project1.jpg',
+    galleryImages: [
+      '/images/projects/project1.jpg',
+      '/images/projects/project2.jpg',
+      '/images/projects/project3.jpg',
+    ],
+    description: 'Travaux de réfection d\'étanchéité avec amélioration énergétique et sécurisation de 10 bâtiments d\'habitation, soit environ 8 000 m².',
+    challenges: ['Ce projet d\'envergure a nécessité une coordination précise entre les différentes équipes pour assurer la réfection complète de l\'étanchéité tout en minimisant les perturbations pour les résidents.'],
+    solutions: ['Nous avons mis en place un plan d\'intervention par phases, permettant de traiter chaque bâtiment de manière séquentielle tout en assurant une amélioration énergétique significative.'],
+    results: ['Le projet a permis une amélioration notable de l\'efficacité énergétique des bâtiments, tout en assurant une étanchéité parfaite des toitures terrasses. La sécurisation des espaces a également été renforcée.']
+  },
+  'residence-la-briche': {
+    id: '2',
+    title: 'Résidence LA BRICHE',
+    location: 'Epinay-sur-Seine, France',
+    category: 'Résidentiel',
+    year: '2024',
+    client: 'Cabinet SDC',
+    duration: '3 mois',
+    imageSrc: '/images/projects/project2.jpg',
+    galleryImages: [
+      '/images/projects/project2.jpg',
+      '/images/projects/project3.jpg',
+      '/images/projects/project4.jpg',
+    ],
+    description: 'Travaux de réfection de 2 terrasses inaccessibles (1200 m²) et pose de 300 ml de garde-corps.',
+    challenges: ['La configuration des terrasses et leur inaccessibilité ont représenté un défi technique important pour nos équipes.'],
+    solutions: ['Nous avons utilisé des techniques spécifiques et un équipement adapté pour accéder aux zones difficiles tout en garantissant la sécurité de nos équipes.'],
+    results: ['Les terrasses bénéficient désormais d\'une étanchéité parfaite et les garde-corps installés assurent une sécurité optimale pour les interventions de maintenance.']
+  },
+  'residence-toit-joie-poissy': {
+    id: '3',
+    title: 'Résidence de logements sociaux TOIT et JOIE',
+    location: 'Poissy, France',
+    category: 'Résidentiel',
+    year: '2024',
+    client: 'TOIT et JOIE',
+    duration: '5 mois',
+    imageSrc: '/images/projects/project3.jpg',
+    galleryImages: [
+      '/images/projects/project3.jpg',
+      '/images/projects/project4.jpg',
+      '/images/projects/project5.jpg',
+    ],
+    description: 'Réfection complète de 1 800 m² de complexe iso / étanche sur terrasses inaccessibles de 4 bâtiments d\'habitation, 543 ml de gardes corps et couvertine.',
+    challenges: ['La coordination des travaux sur quatre bâtiments différents tout en maintenant l\'habitabilité des logements a constitué un défi majeur.'],
+    solutions: ['Nous avons élaboré un planning précis d\'intervention par bâtiment, avec une communication constante avec les résidents pour minimiser les nuisances.'],
+    results: ['Le projet a été livré dans les délais prévus, avec une qualité d\'exécution qui a permis d\'améliorer significativement l\'isolation et l\'étanchéité des bâtiments.']
+  },
+  'centre-commercial-belle-epine': {
+    id: '8',
+    title: 'Centre Commercial Régional BELLE EPINE',
+    location: 'Thiais, France',
+    category: 'Commercial',
+    year: '2023',
+    client: 'SECAR',
+    duration: '4 mois',
+    imageSrc: '/images/projects/project8.jpg',
+    galleryImages: [
+      '/images/projects/project8.jpg',
+      '/images/projects/project9.jpg',
+      '/images/projects/project10.jpg',
+    ],
+    description: 'Travaux de réfection des commandes de désenfumages des galeries marchandes.',
+    challenges: ['Intervenir dans un centre commercial en activité tout en assurant la sécurité des usagers et en minimisant l\'impact sur l\'activité commerciale.'],
+    solutions: ['Organisation des travaux principalement en horaires décalés (nuit) et mise en place d\'un phasage précis pour les interventions dans les zones publiques.'],
+    results: ['Mise aux normes complète du système de désenfumage, garantissant une sécurité optimale pour les usagers du centre commercial.']
+  },
+  'residence-les-roitelets': {
+    id: '9',
+    title: 'Résidence les Roitelets',
+    location: 'Paris, France',
+    category: 'Résidentiel',
+    year: '2023',
+    client: 'ICF LA SABLIERE',
+    duration: '8 mois',
+    imageSrc: '/images/projects/project9.jpg',
+    galleryImages: [
+      '/images/projects/project9.jpg',
+      '/images/projects/project10.jpg',
+      '/images/projects/project11.jpg',
+    ],
+    description: 'Réfection complète de 6 000 m² de complexe iso / étanche sur terrasses inaccessibles de bâtiments d\'habitation, 1 300 ml de gardes corps et contre bardage d\'acrotère.',
+    challenges: ['L\'ampleur du projet et la nécessité d\'intervenir sur des terrasses inaccessibles tout en garantissant une parfaite étanchéité.'],
+    solutions: ['Utilisation de techniques avancées d\'étanchéité et mise en place d\'équipes spécialisées pour les interventions en hauteur.'],
+    results: ['Amélioration significative de l\'isolation thermique des bâtiments et élimination complète des problèmes d\'infiltration.']
+  },
+  'quartier-beaudottes': {
+    id: '11',
+    title: 'Quartier des Beaudottes',
+    location: 'Sevran, France',
+    category: 'Résidentiel',
+    year: '2022',
+    client: 'France Habitation',
+    duration: '5 mois',
+    imageSrc: '/images/projects/project11.jpg',
+    galleryImages: [
+      '/images/projects/project11.jpg',
+      '/images/projects/project12.jpg',
+      '/images/projects/project1.jpg',
+    ],
+    description: 'Réfection complète de 2695 m² de complexe iso / étanche sur terrasses inaccessibles de bâtiments d\'habitation.',
+    challenges: ['Intervenir sur un ensemble de bâtiments d\'habitation en milieu occupé, avec des contraintes d\'accès importantes.'],
+    solutions: ['Planification rigoureuse des interventions et mise en place d\'un système d\'accès sécurisé aux terrasses.'],
+    results: ['Amélioration de l\'étanchéité et de l\'isolation thermique des bâtiments, contribuant à une réduction significative des déperditions énergétiques.']
+  }
+};
