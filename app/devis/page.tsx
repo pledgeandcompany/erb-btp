@@ -30,7 +30,7 @@ export default function DevisPage() {
                 Documents et informations nécessaires
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-5">
-                Pour vous fournir un devis précis, nous aurons besoin des éléments suivants. Préparez-les à l'avance pour accélérer le processus :
+                Pour vous fournir un devis précis, nous aurons besoin des éléments suivants. Préparez-les à l&apos;avance pour accélérer le processus :
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -51,7 +51,7 @@ export default function DevisPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <span className="text-gray-700 dark:text-gray-300">Photos de l'espace actuel ou du terrain</span>
+                      <span className="text-gray-700 dark:text-gray-300">Photos de l&apos;espace actuel ou du terrain</span>
                     </li>
                     <li className="flex items-start">
                       <div className="flex-shrink-0 h-5 w-5 mr-2">
@@ -217,7 +217,7 @@ export default function DevisPage() {
                     </li>
                     <li className="flex items-start">
                       <span className="text-yellow-500 mr-2">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Travaux d'étanchéité et d'isolation</span>
+                      <span className="text-gray-700 dark:text-gray-300">Travaux d&apos;étanchéité et d&apos;isolation</span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-yellow-500 mr-2">✓</span>

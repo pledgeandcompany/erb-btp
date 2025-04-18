@@ -60,38 +60,42 @@ export default function MentionsLegales() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Propriété intellectuelle</h2>
               <p className="mb-4">
-                L'ensemble du contenu du site web erb-btp.fr (architecture, textes, photos, illustrations, logos, icônes, fichiers 
-                disponibles en téléchargement, etc.) est la propriété exclusive de ERB-BTP Construction ou de ses partenaires et est 
-                protégé par les lois françaises et internationales relatives à la propriété intellectuelle.
+                L&apos;utilisateur du site est invité à signaler toute omission, erreur ou correction.
               </p>
               <p className="mb-4">
-                Toute reproduction, représentation, modification, publication, adaptation totale ou partielle des éléments du site, 
-                quel que soit le moyen ou le procédé utilisé, est interdite sans l'autorisation écrite préalable de ERB-BTP Construction.
+                Le site ERB-BTP constitue une œuvre protégée par les lois en vigueur sur la propriété intellectuelle. Aucune reproduction ou représentation ne peut être réalisée en contravention avec les droits de l&apos;auteur.
+              </p>
+              <p className="mb-4">
+                Toute reproduction totale ou partielle du site ERB-BTP est strictement interdite sauf autorisation expresse de l&apos;éditeur, en violation de l&apos;article L.122-4 du Code de la propriété intellectuelle.
+              </p>
+              <p className="mb-4">
+                L&apos;utilisateur reconnaît que :
+                <br />
+                - L&apos;utilisation du site est régie par les présentes conditions d&apos;utilisation.
+              </p>
+              <p className="mb-4">
+                Les informations et documents du site sont présentés à titre indicatif, sans caractère exhaustif, et ne peuvent engager la responsabilité de l&apos;éditeur. L&apos;éditeur se réserve le droit de modifier le contenu du site à tout moment et sans préavis.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Liens hypertextes</h2>
               <p className="mb-4">
-                Le site web erb-btp.fr peut contenir des liens hypertextes vers d'autres sites internet. ERB-BTP Construction n'exerce 
-                aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
+                Le site web erb-btp.fr peut contenir des liens hypertextes vers d&apos;autres sites internet. ERB-BTP Construction n&apos;exerce aucun contrôle sur ces sites et décline toute responsabilité quant à leur contenu.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Protection des données personnelles</h2>
               <p className="mb-4">
-                ERB-BTP Construction s'engage à respecter la confidentialité des données personnelles communiquées par les utilisateurs 
-                du site web erb-btp.fr. Pour plus d'informations sur la manière dont nous traitons vos données personnelles, veuillez 
-                consulter notre <a href="/politique-confidentialite" className="text-yellow-500 hover:underline">Politique de Confidentialité</a>.
+                ERB-BTP Construction s&apos;engage à respecter la confidentialité des données personnelles communiquées par les utilisateurs du site web erb-btp.fr. Pour plus d&apos;informations sur la manière dont nous traitons vos données personnelles, veuillez consulter notre <a href="/politique-confidentialite" className="text-yellow-500 hover:underline">Politique de Confidentialité</a>.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Cookies</h2>
               <p className="mb-4">
-                Le site web erb-btp.fr utilise des cookies pour améliorer l'expérience utilisateur. Pour plus d'informations sur 
-                l'utilisation des cookies, veuillez consulter notre <a href="/politique-cookies" className="text-yellow-500 hover:underline">Politique de Cookies</a>.
+                Le site web erb-btp.fr utilise des cookies pour améliorer l&apos;expérience utilisateur. Pour plus d&apos;informations sur l&apos;utilisation des cookies, veuillez consulter notre <a href="/politique-cookies" className="text-yellow-500 hover:underline">Politique de Cookies</a>.
               </p>
             </section>
 
@@ -105,7 +109,7 @@ export default function MentionsLegales() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact</h2>
               <p className="mb-4">
-                Pour toute question concernant les présentes mentions légales, veuillez nous contacter à l'adresse suivante : 
+                Pour toute question concernant les présentes mentions légales, veuillez nous contacter à l&apos;adresse suivante : 
                 <a href="mailto:contact@erb-btp.fr" className="text-yellow-500 hover:underline ml-1">contact@erb-btp.fr</a>
               </p>
             </section>

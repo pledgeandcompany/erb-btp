@@ -21,29 +21,21 @@ export default function PolitiqueConfidentialite() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Introduction</h2>
               <p className="mb-4">
-                ERB-BTP s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, 
-                utilisons et protégeons vos données personnelles lorsque vous utilisez notre site web et nos services.
+                La présente politique de confidentialité a pour objet d&apos;informer les utilisateurs du site web erb-btp.fr sur la manière dont leurs données personnelles sont collectées et traitées.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Données collectées</h2>
               <p className="mb-4">
-                Nous pouvons collecter les types d'informations suivants :
+                ERB-BTP Construction s&apos;engage à respecter la confidentialité des données personnelles des utilisateurs de son site web.
               </p>
-              <ul className="list-disc pl-6 space-y-3">
-                <li>
-                  <span className="font-medium text-gray-900 dark:text-white">Informations personnelles :</span> Nom, prénom, adresse e-mail, numéro de téléphone, adresse postale 
-                  lorsque vous remplissez un formulaire de contact ou de devis.
-                </li>
-                <li>
-                  <span className="font-medium text-gray-900 dark:text-white">Informations sur votre projet :</span> Type de projet, surface, budget, délais et autres détails 
-                  spécifiques que vous nous communiquez.
-                </li>
-                <li>
-                  <span className="font-medium text-gray-900 dark:text-white">Données de navigation :</span> Informations sur votre visite de notre site, y compris les pages 
-                  consultées, la durée de la visite et votre parcours sur le site.
-                </li>
+              <p className="mb-4">
+                Nous collectons et traitons des données personnelles pour les finalités suivantes :
+              </p>
+              <ul className="list-disc pl-6 mb-4 space-y-2">
+                <li>Gestion des demandes d&apos;information et de devis</li>
+                <li>Communication avec l&apos;utilisateur</li>
               </ul>
             </section>
 
@@ -77,8 +69,7 @@ export default function PolitiqueConfidentialite() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Conservation des données</h2>
               <p className="mb-4">
-                Nous conservons vos données personnelles aussi longtemps que nécessaire pour atteindre les finalités pour 
-                lesquelles elles ont été collectées, sauf si la loi exige ou permet une période de conservation plus longue.
+                Nous ne conservons vos données que pour la durée nécessaire aux finalités pour lesquelles elles ont été collectées, dans le respect de la législation en vigueur.
               </p>
             </section>
 
@@ -96,7 +87,7 @@ export default function PolitiqueConfidentialite() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Vos droits</h2>
               <p className="mb-4">
-                Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+                Vous disposez d&apos;un droit d&apos;accès, de rectification, de suppression, de limitation et d&apos;opposition au traitement de vos données personnelles.
               </p>
               <ul className="list-disc pl-6 space-y-3">
                 <li>Droit d'accès à vos données personnelles</li>
@@ -120,17 +111,14 @@ export default function PolitiqueConfidentialite() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Modifications de notre politique</h2>
               <p className="mb-4">
-                Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera 
-                publiée sur cette page et prendra effet dès sa publication.
+                Nous nous réservons le droit de modifier la présente politique de confidentialité à tout moment. Les modifications entreront en vigueur dès leur publication sur le site web. Nous vous encourageons à consulter régulièrement cette page pour prendre connaissance des éventuelles modifications.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Contact</h2>
               <p className="mb-4">
-                Si vous avez des questions concernant notre politique de confidentialité ou si vous souhaitez exercer 
-                vos droits, veuillez nous contacter à l'adresse suivante : 
-                <a href="mailto:contact@erb-btp.fr" className="text-yellow-500 hover:underline ml-1">contact@erb-btp.fr</a>
+                Pour exercer vos droits ou pour toute question relative à la protection de vos données personnelles, vous pouvez nous contacter à l&apos;adresse suivante : <a href="mailto:contact@erb-btp.fr" className="text-yellow-500 hover:underline">contact@erb-btp.fr</a>
               </p>
             </section>
           </div>
