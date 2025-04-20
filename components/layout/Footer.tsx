@@ -89,28 +89,28 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Nos Engagements</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
-                  Qualité & délais
+                <Link href="/qualite" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                  Qualité
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                <Link href="/securite" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
                   Sécurité
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                <Link href="/environnement" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
                   Environnement
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
-                  Accompagnement
+                <Link href="/materiaux" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                  Matériaux
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
-                  Matériaux certifiés
+                <Link href="/partenaires" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+                  Partenaires
                 </Link>
               </li>
             </ul>
