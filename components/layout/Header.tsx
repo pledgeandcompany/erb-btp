@@ -19,7 +19,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/logo-erb.png" 
+              src="/logo-transparent.png" 
               alt="ERB-BTP Logo" 
               width={50} 
               height={50} 

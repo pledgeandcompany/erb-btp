@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <Image 
-                src="/logo-erb.png" 
+                src="/logo-transparent.png" 
                 alt="ERB-BTP Logo" 
                 width={50} 
                 height={50} 
@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
                 <svg className="h-6 w-6 mr-2 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-gray-600 dark:text-gray-400">SIRET : 123 456 789 00012 | TVA : FR12 345678901</span>
+                <span className="text-gray-600 dark:text-gray-400">SIRET : 912 731 858 00011 | TVA : FR46 912 731 858</span>
               </li>
             </ul>
           </div>

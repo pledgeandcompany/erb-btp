@@ -10,7 +10,7 @@ const ContactInfo: React.FC = () => {
       
       <div className="flex items-center mb-8">
         <Image 
-          src="/logo-erb.png" 
+          src="/logo-transparent.png" 
           alt="ERB-BTP Logo" 
           width={60} 
           height={60} 
