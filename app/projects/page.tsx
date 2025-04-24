@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import ProjectsHero from '@/components/projects/ProjectsHero';
 import ProjectsFilter from '@/components/projects/ProjectsFilter';
 import ProjectsGrid from '@/components/projects/ProjectsGrid';
+import ProjectsCollaborations from '@/components/projects/ProjectsCollaborations';
 import { projectsList, projectCategories } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
 
@@ -53,6 +54,9 @@ export default function ProjectsPage() {
           )}
         </div>
       </section>
+      
+      {/* Collaborations Section */}
+      <ProjectsCollaborations />
       
       {/* Testimonials Section */}
       <section className="py-16 bg-white dark:bg-gray-900">

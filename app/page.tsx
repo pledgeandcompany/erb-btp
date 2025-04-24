@@ -4,6 +4,7 @@ import ServiceCard from '@/components/home/ServiceCard';
 import ProjectCard from '@/components/home/ProjectCard';
 import TestimonialCard from '@/components/home/TestimonialCard';
 import Qualifications from '@/components/home/Qualifications';
+import Collaborations from '@/components/home/Collaborations';
 import { Button } from '@/components/ui/Button';
 
 export default function Home() {
@@ -157,6 +158,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Collaborations Section */}
+      <Collaborations />
 
       {/* Testimonials Section */}
       <section className="py-16 bg-white dark:bg-gray-800 text-gray-900 dark:text-white">

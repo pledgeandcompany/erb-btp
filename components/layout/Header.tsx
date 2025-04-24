@@ -39,9 +39,6 @@ const Header: React.FC = () => {
             <Link href="/projects" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
               Projets
             </Link>
-            <Link href="/partenaires" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
-              Partenaires
-            </Link>
             <Link href="/contact" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
               Contact
             </Link>
@@ -107,13 +104,6 @@ const Header: React.FC = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Projets
-            </Link>
-            <Link 
-              href="/partenaires" 
-              className="py-3 text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium border-b border-gray-200 dark:border-gray-700"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Partenaires
             </Link>
             <Link 
               href="/contact" 

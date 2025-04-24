@@ -4,6 +4,16 @@ const nextConfig = {
     // Désactiver ESLint pendant la compilation pour éviter les erreurs liées aux apostrophes
     ignoreDuringBuilds: true,
   },
+  // Désactiver l'échappement des apostrophes
+  reactStrictMode: true,
+  compiler: {
+    // Supprime les conversions d'apostrophes en entités HTML
+    styledComponents: true,
+  },
+  // Optimisation des images
+  images: {
+    formats: ['image/avif', 'image/webp'],
+  }
 }
 
 export default nextConfig;

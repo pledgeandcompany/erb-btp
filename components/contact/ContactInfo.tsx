@@ -43,20 +43,22 @@ const ContactInfo: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Téléphone</h5>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">+33 7 45 37 46 21</p>
+            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Service commercial</h5>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">06 35 30 15 07</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">commercial@erb-btp.fr</p>
           </div>
         </div>
         
         <div className="flex items-start">
           <div className="flex-shrink-0 h-10 w-10 flex items-center justify-center rounded-full bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300 mr-3">
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
           </div>
           <div>
-            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Email</h5>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">ali.tombari@erb-btp.fr</p>
+            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Service travaux</h5>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">+33 6 29 83 94 71</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">contact@erb-btp.fr</p>
           </div>
         </div>
         
@@ -67,7 +69,7 @@ const ContactInfo: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Heures d&#39;ouverture</h5>
+            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Heures d'ouverture</h5>
             <p className="text-gray-600 dark:text-gray-400 mt-1">Lundi - Vendredi: 8h - 18h</p>
             <p className="text-gray-600 dark:text-gray-400">Samedi: 9h - 12h</p>
           </div>
@@ -76,15 +78,29 @@ const ContactInfo: React.FC = () => {
       
       <div className="mt-8">
         <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Contact direct</h4>
-        <div className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-          <div className="mr-4">
-            <div className="h-12 w-12 rounded-full bg-yellow-100 dark:bg-yellow-900 flex items-center justify-center">
-              <span className="text-xl font-bold text-yellow-600 dark:text-yellow-300">AT</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <div className="mr-4">
+              <div className="h-12 w-12 rounded-full bg-yellow-100 dark:bg-yellow-900 flex items-center justify-center">
+                <span className="text-xl font-bold text-yellow-600 dark:text-yellow-300">AT</span>
+              </div>
+            </div>
+            <div>
+              <h5 className="font-medium text-gray-900 dark:text-white">Ali TOMBARI</h5>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">ali.tombari@erb-btp.fr</p>
             </div>
           </div>
-          <div>
-            <h5 className="font-medium text-gray-900 dark:text-white">Ali TOMBARI</h5>
-            <p className="text-gray-600 dark:text-gray-400 text-sm">Chargé d&#39;affaire</p>
+          
+          <div className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <div className="mr-4">
+              <div className="h-12 w-12 rounded-full bg-yellow-100 dark:bg-yellow-900 flex items-center justify-center">
+                <span className="text-xl font-bold text-yellow-600 dark:text-yellow-300">YE</span>
+              </div>
+            </div>
+            <div>
+              <h5 className="font-medium text-gray-900 dark:text-white">Yasin ELMATIAR</h5>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">yasin.elmatiar@erb-btp.fr</p>
+            </div>
           </div>
         </div>
       </div>

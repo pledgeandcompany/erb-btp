@@ -119,33 +119,58 @@ const Footer: React.FC = () => {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Contact</h3>
-            <ul className="space-y-2">
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+            
+            {/* Address and SIRET */}
+            <div className="flex items-start mb-4">
+              <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div>
                 <span className="text-gray-600 dark:text-gray-400">86 Rue Voltaire, 93100 MONTREUIL</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-400">+33 7 45 37 46 21</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-400">ali.tombari@erb-btp.fr</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-400">SIRET : 912 731 858 00011 | TVA : FR46 912 731 858</span>
-              </li>
-            </ul>
+                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                  SIRET : 912 731 858 00011<br/>
+                  TVA : FR46 912 731 858
+                </div>
+              </div>
+            </div>
+            
+            {/* Service sections in two columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-gray-100 dark:border-gray-700 pt-3">
+              {/* Service commercial */}
+              <div>
+                <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-300 mb-2">Service commercial :</h4>
+                <div className="flex items-center mb-1">
+                  <svg className="h-4 w-4 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm">06 35 30 15 07</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="h-4 w-4 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm truncate max-w-[140px]">Commercial@erb-btp.fr</span>
+                </div>
+              </div>
+              
+              {/* Service travaux */}
+              <div>
+                <h4 className="text-sm font-semibold text-gray-800 dark:text-gray-300 mb-2">Service travaux :</h4>
+                <div className="flex items-center mb-1">
+                  <svg className="h-4 w-4 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm">+33 6 29 83 94 71</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="h-4 w-4 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm truncate max-w-[140px]">contact@erb-btp.fr</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
