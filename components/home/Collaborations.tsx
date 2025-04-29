@@ -1,9 +1,9 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import SectionTitle from '@/components/ui/SectionTitle';
+import CollaboratorLogo from '@/components/ui/CollaboratorLogo';
 
 interface Collaborator {
   name: string;
@@ -13,27 +13,27 @@ interface Collaborator {
 const collaborators: Collaborator[] = [
   {
     name: 'Mairie de Paris',
-    logo: '/images/collaborators/mairie-paris.png'
+    logo: '/mairie-paris-logo.png'
   },
   {
     name: 'RIVP',
-    logo: '/images/collaborators/rivp.png'
+    logo: '/rivp.webp'
   },
   {
     name: 'Paris Habitat',
-    logo: '/images/collaborators/paris-habitat.png'
+    logo: '/paris-habitat.png'
   },
   {
     name: 'Bouygues Construction',
-    logo: '/images/collaborators/bouygues.png'
+    logo: '/bouyguesc-logo.png'
   },
   {
     name: 'Eiffage',
-    logo: '/images/collaborators/eiffage.png'
+    logo: '/logo-eiffage.png'
   },
   {
     name: 'Vinci',
-    logo: '/images/collaborators/vinci.png'
+    logo: '/vinci-logo.png'
   }
 ];
 
@@ -49,12 +49,10 @@ const Collaborations: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center">
           {collaborators.map((collaborator, index) => (
             <div key={index} className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow flex items-center justify-center h-24">
-              <div className="relative h-16 w-full">
-                <Image
+              <div className="h-16 w-full flex items-center justify-center">
+                <CollaboratorLogo 
                   src={collaborator.logo}
                   alt={`${collaborator.name} logo`}
-                  fill
-                  className="object-contain"
                 />
               </div>
             </div>

@@ -12,32 +12,32 @@ interface Collaborator {
 const collaborators: Collaborator[] = [
   {
     name: 'Mairie de Paris',
-    logo: '/images/collaborators/mairie-paris.png',
+    logo: '/mairie-paris-logo.png',
     description: 'Projets de rénovation urbaine'
   },
   {
     name: 'RIVP',
-    logo: '/images/collaborators/rivp.png',
+    logo: '/rivp.webp',
     description: 'Réhabilitation de logements sociaux'
   },
   {
     name: 'Paris Habitat',
-    logo: '/images/collaborators/paris-habitat.png',
+    logo: '/paris-habitat.png',
     description: 'Travaux d\'étanchéité et toiture'
   },
   {
     name: 'Bouygues Construction',
-    logo: '/images/collaborators/bouygues.png',
+    logo: '/bouyguesc-logo.png',
     description: 'Sous-traitance sur grands projets'
   },
   {
     name: 'Eiffage',
-    logo: '/images/collaborators/eiffage.png',
+    logo: '/logo-eiffage.png',
     description: 'Partenariat sur projets d\'infrastructure'
   },
   {
     name: 'Vinci',
-    logo: '/images/collaborators/vinci.png',
+    logo: '/vinci-logo.png',
     description: 'Collaboration sur projets commerciaux'
   }
 ];

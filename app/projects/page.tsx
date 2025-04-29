@@ -5,7 +5,7 @@ import ProjectsHero from '@/components/projects/ProjectsHero';
 import ProjectsFilter from '@/components/projects/ProjectsFilter';
 import ProjectsGrid from '@/components/projects/ProjectsGrid';
 import ProjectsCollaborations from '@/components/projects/ProjectsCollaborations';
-import { projectsList, projectCategories } from '@/data/projects';
+import { projectsList, projectCategories, projectsDetails } from '@/data/projects';
 import { Button } from '@/components/ui/Button';
 
 export default function ProjectsPage() {
@@ -40,7 +40,10 @@ export default function ProjectsPage() {
           />
           
           {/* Projects Grid */}
-          <ProjectsGrid projects={filteredProjects} />
+          <ProjectsGrid 
+            projects={filteredProjects} 
+            projectDetails={projectsDetails}
+          />
           
           {filteredProjects.length === 0 && (
             <div className="text-center py-12">

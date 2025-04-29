@@ -2,7 +2,6 @@ import React from 'react';
 import AboutHero from '@/components/about/AboutHero';
 import AboutHistory from '@/components/about/AboutHistory';
 import AboutValues from '@/components/about/AboutValues';
-import AboutTeam from '@/components/about/AboutTeam';
 import { Button } from '@/components/ui/Button';
 
 export const metadata = {
@@ -21,9 +20,6 @@ export default function AboutPage() {
       
       {/* Values Section */}
       <AboutValues />
-      
-      {/* Team Section */}
-      <AboutTeam />
       
       {/* CTA Section */}
       <section className="py-16 bg-white dark:bg-gray-800">
