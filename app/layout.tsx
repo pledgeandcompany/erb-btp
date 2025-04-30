@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "ERB-BTP",
     images: [
       {
-        url: "/images/hero-construction.png",
+        url: "/logo-main.png",
         width: 1200,
         height: 630,
         alt: "ERB-BTP Construction et Rénovation",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ERB-BTP | Construction et Rénovation à Paris et Île-de-France",
     description: "Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement. Plus de 20 ans d'expertise en Île-de-France.",
-    images: ["/images/hero-construction.png"],
+    images: ["/logo-main.png"],
   },
   icons: {
     icon: '/logo-transparent.png',
