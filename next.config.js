@@ -1,18 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
-    domains: ['localhost'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
     ],
   },
   experimental: {
-    serverActions: true,
+    serverActions: {
+      allowedOrigins: ['localhost:3000', 'erb-btp.vercel.app', 'erb-btp.fr'],
+    },
   },
   eslint: {
     ignoreDuringBuilds: true,

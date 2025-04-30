@@ -6,6 +6,7 @@ import TestimonialCard from '@/components/home/TestimonialCard';
 import Qualifications from '@/components/home/Qualifications';
 import Collaborations from '@/components/home/Collaborations';
 import { Button } from '@/components/ui/Button';
+import Script from 'next/script';
 
 export default function Home() {
   // Services data
@@ -209,6 +210,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "ERB-BTP",
+            "image": "/images/logo-erb-btp.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "12 rue de la République",
+              "addressLocality": "Paris",
+              "addressRegion": "Île-de-France",
+              "postalCode": "75001",
+              "addressCountry": "France"
+            },
+            "telephone": "+33 1 23 45 67 89",
+            "openingHours": "Mo-Fr 09:00-18:00",
+            "sameAs": [
+              "https://www.erb-btp.com",
+              "https://www.facebook.com/erb-btp",
+              "https://www.instagram.com/erb_btp"
+            ]
+          }),
+        }}
+      />
     </>
   );
 }

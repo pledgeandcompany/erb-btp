@@ -16,8 +16,50 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ERB-BTP | Construction et Rénovation",
-  description: "Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement",
+  title: "ERB-BTP | Construction et Rénovation à Paris et Île-de-France",
+  description: "Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement. Plus de 20 ans d'expertise en Île-de-France.",
+  keywords: "construction, rénovation, maçonnerie, étanchéité, isolation, ravalement, BTP, Paris, Île-de-France, entreprise construction",
+  authors: [{ name: "ERB-BTP" }],
+  creator: "ERB-BTP",
+  publisher: "ERB-BTP",
+  formatDetection: {
+    telephone: true,
+    email: true,
+    address: true,
+  },
+  metadataBase: new URL("https://www.erb-btp.fr"),
+  alternates: {
+    canonical: "/",
+    languages: {
+      'fr-FR': "/",
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://www.erb-btp.fr",
+    title: "ERB-BTP | Construction et Rénovation à Paris et Île-de-France",
+    description: "Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement. Plus de 20 ans d'expertise en Île-de-France.",
+    siteName: "ERB-BTP",
+    images: [
+      {
+        url: "/images/hero-construction.png",
+        width: 1200,
+        height: 630,
+        alt: "ERB-BTP Construction et Rénovation",
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ERB-BTP | Construction et Rénovation à Paris et Île-de-France",
+    description: "Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement. Plus de 20 ans d'expertise en Île-de-France.",
+    images: ["/images/hero-construction.png"],
+  },
+  icons: {
+    icon: '/logo-transparent.png',
+    apple: '/logo-transparent.png',
+  },
 };
 
 export default function RootLayout({
