@@ -22,7 +22,7 @@ const MoyensHumains: React.FC = () => {
           </div>
           <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm text-center">
             <div className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">1</div>
-            <div className="text-gray-600 dark:text-gray-300 text-sm">Chargé d'affaires</div>
+            <div className="text-gray-600 dark:text-gray-300 text-sm">Chargé d&apos;affaires</div>
           </div>
           <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm text-center">
             <div className="text-3xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">1</div>
@@ -190,12 +190,12 @@ const MoyensHumains: React.FC = () => {
 
       {/* Insertion par l'économie */}
       <div className="mb-10 bg-gray-50 dark:bg-gray-800 p-6 rounded-lg">
-        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Pourcentage réservé à l'insertion par l'économie</h3>
+        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Pourcentage réservé à l&apos;insertion par l&apos;économie</h3>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          À chaque chantier, ERB-BTP s'efforce de réserver les emplois de manœuvre à l'insertion sociale par l'économie. En effet, les autres travaux d'étanchéité nécessitent du personnel qualifié qu'il est difficile d'obtenir autrement que par une formation interne de longue durée ou un recrutement de personnel qualifié.
+          À chaque chantier, ERB-BTP s&apos;efforce de réserver les emplois de manœuvre à l&apos;insertion sociale par l&apos;économie. En effet, les autres travaux d&apos;étanchéité nécessitent du personnel qualifié qu&apos;il est difficile d&apos;obtenir autrement que par une formation interne de longue durée ou un recrutement de personnel qualifié.
         </p>
         <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Sur une équipe moyenne de 5 personnes, on compte en général 2 manœuvres. La méthode de recrutement du personnel à insérer est la suivante : Nous nous adressons à la mairie de la ville où est situé le chantier afin d'obtenir les coordonnées des associations ou agence intérimaires spécialisés dans ce type d'action. Puis, nous recevons les candidats à l'insertion.
+          Sur une équipe moyenne de 5 personnes, on compte en général 2 manœuvres. La méthode de recrutement du personnel à insérer est la suivante : Nous nous adressons à la mairie de la ville où est situé le chantier afin d&apos;obtenir les coordonnées des associations ou agence intérimaires spécialisés dans ce type d&apos;action. Puis, nous recevons les candidats à l&apos;insertion.
         </p>
         <p className="text-gray-600 dark:text-gray-400 font-semibold">
           Plusieurs de nos salariés actuels ont été recrutés définitivement par ce biais sous forme de CDI.
@@ -209,7 +209,7 @@ const MoyensHumains: React.FC = () => {
           <div className="mb-6">
             <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">Avantages de notre solution</h4>
             <p className="text-gray-600 dark:text-gray-400 mb-3">
-              <span className="font-semibold text-yellow-600 dark:text-yellow-400">33%</span> du temps de travail effectif des techniciens est économisé par les entreprises disposant d'une solution de gestion d'interventions.
+              <span className="font-semibold text-yellow-600 dark:text-yellow-400">33%</span> du temps de travail effectif des techniciens est économisé par les entreprises disposant d&apos;une solution de gestion d&apos;interventions.
             </p>
             <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-1">
               <li>Recherche de gains de productivité</li>
@@ -217,17 +217,17 @@ const MoyensHumains: React.FC = () => {
               <li>Satisfaction client</li>
               <li>Respect des engagements contractuels</li>
               <li>Apporter au client les preuves matérielles</li>
-              <li>Répondre efficacement à toutes les demandes d'intervention de nos clients, notamment les urgences</li>
+              <li>Répondre efficacement à toutes les demandes d&apos;intervention de nos clients, notamment les urgences</li>
             </ul>
           </div>
           
           <div className="mb-6">
             <p className="text-gray-600 dark:text-gray-400 mb-3">
-              <span className="font-semibold text-yellow-600 dark:text-yellow-400">3.7%</span> c'est le nombre moyen d'interventions de maintenance que réalise un technicien quotidiennement.
+              <span className="font-semibold text-yellow-600 dark:text-yellow-400">3.7%</span> c&apos;est le nombre moyen d&apos;interventions de maintenance que réalise un technicien quotidiennement.
             </p>
             <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-1">
-              <li>Solution d'intervention pertinente pour la mobilité de nos techniciens (tablette ou smartphone)</li>
-              <li>Planning, type d'intervention, complexité et détail de l'intervention, interlocuteur, adresse de l'intervention.</li>
+              <li>Solution d&apos;intervention pertinente pour la mobilité de nos techniciens (tablette ou smartphone)</li>
+              <li>Planning, type d&apos;intervention, complexité et détail de l&apos;intervention, interlocuteur, adresse de l&apos;intervention.</li>
             </ul>
           </div>
           
@@ -235,14 +235,14 @@ const MoyensHumains: React.FC = () => {
             <h4 className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-3">Portail accessible au client</h4>
             <ul className="list-disc pl-6 text-gray-600 dark:text-gray-400 space-y-1">
               <li>Identifiant fourni au client</li>
-              <li>Liste des sites d'intervention sous contrat répertorié</li>
+              <li>Liste des sites d&apos;intervention sous contrat répertorié</li>
               <li>Nom des techniciens renseignés</li>
-              <li>Type d'intervention entretien ou réparation sur couverture ou étanchéité</li>
-              <li>Rapport photo (AVANT/APRES) de l'intervention accessible par le client</li>
-              <li>Accès au planning d'intervention sous contrat</li>
+              <li>Type d&apos;intervention entretien ou réparation sur couverture ou étanchéité</li>
+              <li>Rapport photo (AVANT/APRES) de l&apos;intervention accessible par le client</li>
+              <li>Accès au planning d&apos;intervention sous contrat</li>
             </ul>
             <p className="mt-4 text-gray-600 dark:text-gray-400 italic">
-              Une solution intuitive et facile d'utilisation avec seulement un navigateur web.
+              Une solution intuitive et facile d&apos;utilisation avec seulement un navigateur web.
             </p>
           </div>
         </div>

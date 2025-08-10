@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
 import SectionTitle from '@/components/ui/SectionTitle';
 import CollaboratorLogo from '@/components/ui/CollaboratorLogo';
 
@@ -59,14 +58,7 @@ const Collaborations: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-8 text-center">
-          <Link 
-            href="/projects" 
-            className="text-yellow-600 dark:text-yellow-400 hover:underline font-medium"
-          >
-            Découvrir nos projets et collaborations →
-          </Link>
-        </div>
+
       </div>
     </section>
   );

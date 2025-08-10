@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 interface CategoryItem {
   id: string;
@@ -18,8 +18,32 @@ const ProjectsFilter: React.FC<ProjectsFilterProps> = ({
   activeCategory,
   onCategoryChange
 }) => {
+  const [isMobile, setIsMobile] = useState(false);
+  
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkIfMobile();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile);
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+  
+  // Don't render on mobile
+  if (isMobile) {
+    return null;
+  }
   return (
-    <div className="mb-12">
+    <div className="mb-12 hidden md:block">
       <div className="flex flex-wrap justify-center gap-4">
         {categories.map((category) => (
           <button

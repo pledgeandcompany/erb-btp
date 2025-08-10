@@ -15,7 +15,7 @@ const AboutHero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              À propos <span className="text-yellow-500">d&#39;ERB-BTP</span>
+              Notre histoire
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-2xl">
               Depuis plus de 25 ans, ERB-BTP s&#39;est imposé comme un acteur incontournable du secteur de la construction 
@@ -25,11 +25,11 @@ const AboutHero: React.FC = () => {
             
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
-                <span className="text-yellow-500 font-bold text-2xl mr-2">25+</span>
+                <span className="text-yellow-500 font-bold text-2xl mr-2">15+</span>
                 <span className="text-gray-700 dark:text-gray-300">Années d&#39;expérience</span>
               </div>
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
-                <span className="text-yellow-500 font-bold text-2xl mr-2">500+</span>
+                <span className="text-yellow-500 font-bold text-2xl mr-2">100+</span>
                 <span className="text-gray-700 dark:text-gray-300">Projets réalisés</span>
               </div>
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">

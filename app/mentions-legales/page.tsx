@@ -35,8 +35,8 @@ export default function MentionsLegales() {
                 <p className="mb-1">Date de création : 07/04/2022</p>
                 <p className="mb-1">Immatriculation au RNE : 21/04/2022</p>
                 <p className="mb-1">Convention collective : IDCC 1596</p>
-                <p className="mb-1">Durée de la personne morale : 99 ans, jusqu'au 21/04/2121</p>
-                <p className="mb-1">Clôture de l'exercice comptable : 31/12</p>
+                <p className="mb-1">Durée de la personne morale : 99 ans, jusqu&apos;au 21/04/2121</p>
+                <p className="mb-1">Clôture de l&apos;exercice comptable : 31/12</p>
                 <p className="mb-1">Email : <a href="mailto:ali.tombari@erb-btp.fr" className="text-yellow-500 hover:underline">ali.tombari@erb-btp.fr</a></p>
                 <p className="mb-1">Téléphone : +33 7 45 37 46 21</p>
               </div>

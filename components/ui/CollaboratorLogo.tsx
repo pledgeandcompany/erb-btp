@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 interface CollaboratorLogoProps {
   src: string;
@@ -22,10 +23,12 @@ const CollaboratorLogo: React.FC<CollaboratorLogoProps> = ({ src, alt }) => {
   }
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
       onError={handleError}
+      width={150}
+      height={64}
       className="max-h-16 max-w-full object-contain"
     />
   );

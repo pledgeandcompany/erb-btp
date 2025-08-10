@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 interface Qualification {
   code: string;
@@ -9,6 +10,8 @@ interface Qualification {
 }
 
 const Qualifications: React.FC = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  
   const qualifications: Qualification[] = [
     {
       code: '2142',
@@ -47,6 +50,39 @@ const Qualifications: React.FC = () => {
     }
   ];
 
+  // Helper function to render mobile qualification card
+  const renderMobileQualificationCard = (qualification: Qualification, index: number) => {
+    // Extract technicité level from description if it exists
+    const technicityMatch = qualification.description.match(/\(Technicité (.+?)\)/);
+    const technicityLevel = technicityMatch ? technicityMatch[1] : null;
+    
+    return (
+      <div 
+        key={index}
+        className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 mb-4 border-l-4 border-yellow-500"
+      >
+        <div className="flex justify-between items-start mb-2">
+          <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-0.5 rounded">
+            {qualification.code}
+          </span>
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            {qualification.dateAttribution}
+          </span>
+        </div>
+        <h3 className="font-medium text-gray-900 dark:text-white mb-1">
+          {qualification.description.replace(/\(Technicité .+?\)/, '')}
+        </h3>
+        {technicityLevel && (
+          <div className="mt-2">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+              Technicité {technicityLevel}
+            </span>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   return (
     <section className="py-16 bg-gray-100 dark:bg-gray-800">
       <div className="container mx-auto px-4">
@@ -57,47 +93,60 @@ const Qualifications: React.FC = () => {
           </p>
         </div>
         
-        <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden max-w-4xl mx-auto">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
-              <thead className="bg-gray-800 text-white dark:bg-gray-900">
-                <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                    Code
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                    Qualification(s) en cours de validité
-                  </th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-                    Date d&#39;attribution
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600">
-                {qualifications.map((qualification, index) => (
-                  <tr key={index} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800' : 'bg-white dark:bg-gray-700'}>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-black dark:text-white">
-                      {qualification.code}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
-                      {qualification.description}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
-                      {qualification.dateAttribution}
+        {/* Mobile view: cards */}
+        {isMobile ? (
+          <div className="space-y-4">
+            {qualifications.map((qualification, index) => 
+              renderMobileQualificationCard(qualification, index)
+            )}
+            <div className="bg-white dark:bg-gray-700 rounded-lg p-3 text-center text-sm text-gray-700 dark:text-gray-300">
+              Nombre total de qualifications: {qualifications.length}
+            </div>
+          </div>
+        ) : (
+          /* Desktop view: table (unchanged) */
+          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden max-w-4xl mx-auto">
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                <thead className="bg-gray-800 text-white dark:bg-gray-900">
+                  <tr>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                      Code
+                    </th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                      Qualification(s) en cours de validité
+                    </th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
+                      Date d&#39;attribution
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600">
+                  {qualifications.map((qualification, index) => (
+                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800' : 'bg-white dark:bg-gray-700'}>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-black dark:text-white">
+                        {qualification.code}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-700 dark:text-gray-300">
+                        {qualification.description}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 dark:text-gray-300">
+                        {qualification.dateAttribution}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+                <tfoot className="bg-gray-100 dark:bg-gray-800">
+                  <tr>
+                    <td colSpan={3} className="px-6 py-3 text-sm text-gray-700 dark:text-gray-300">
+                      Nombre total de qualifications: {qualifications.length}
                     </td>
                   </tr>
-                ))}
-              </tbody>
-              <tfoot className="bg-gray-100 dark:bg-gray-800">
-                <tr>
-                  <td colSpan={3} className="px-6 py-3 text-sm text-gray-700 dark:text-gray-300">
-                    Nombre total de qualifications: {qualifications.length}
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+                </tfoot>
+              </table>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

@@ -2,67 +2,69 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/Button';
+import { CheckCircle2, Building2 } from 'lucide-react';
 
 const ServiceConstruction: React.FC = () => {
   return (
-    <section id="construction" className="py-16 bg-white dark:bg-gray-800">
+    <section id="construction" className="py-20 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Construction Neuve</h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              ERB-BTP vous accompagne dans tous vos projets de construction neuve, de la conception à la réalisation. 
-              Notre équipe d&#39;experts vous garantit un travail de qualité, respectueux des normes en vigueur et des délais convenus.
-            </p>
+        {/* Service Header with Accent Bar */}
+        <div className="flex items-center mb-12">
+          <div className="h-1 w-12 bg-yellow-500 mr-4"></div>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
+            Construction Neuve
+          </h2>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column - Content */}
+          <div className="order-2 lg:order-1 space-y-8">
+            <div>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                ERB-BTP vous accompagne dans tous vos projets de construction neuve, de la conception à la réalisation. 
+                Notre équipe d&apos;experts vous garantit un travail de qualité, respectueux des normes en vigueur et des délais convenus.
+              </p>
+            </div>
             
-            <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-gray-100">Nos prestations de construction comprennent :</h3>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-300">Maisons individuelles et logements collectifs</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-300">Bâtiments commerciaux et industriels</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-300">Extensions et surélévations</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-300">Gros œuvre et second œuvre</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-6 w-6 mr-2 text-yellow-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-gray-600 dark:text-gray-300">Respect des normes RT 2020 et BBC</span>
-              </li>
-            </ul>
+            {/* Service Features */}
+            <div className="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-600">
+              <h3 className="text-xl font-semibold mb-5 text-gray-800 dark:text-gray-100 flex items-center">
+                <span className="bg-yellow-100 dark:bg-yellow-900 p-2 rounded-full mr-3">
+                  <Building2 className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
+                </span>
+                Nos prestations de construction comprennent :
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Maisons individuelles et logements collectifs",
+                  "Bâtiments commerciaux et industriels",
+                  "Extensions et surélévations",
+                  "Gros œuvre et second œuvre",
+                  "Respect des normes RT 2020 et BBC"
+                ].map((item, index) => (
+                  <li key={index} className="flex items-start transition-all duration-200 hover:translate-x-1">
+                    <CheckCircle2 className="h-6 w-6 mr-3 text-yellow-500 flex-shrink-0" />
+                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
             
-            <Button href="/contact" className="mt-2">
-              Demander un devis
-            </Button>
+
           </div>
           
-          <div className="order-1 lg:order-2">
-            <div className="relative rounded-lg overflow-hidden shadow-xl h-[400px]">
+          {/* Right Column - Image with Overlay */}
+          <div className="order-1 lg:order-2 relative group">
+            <div className="absolute inset-0 bg-yellow-500 transform translate-x-3 translate-y-3 rounded-lg transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
+            <div className="relative rounded-lg overflow-hidden shadow-2xl h-[450px] transition-all duration-300 group-hover:shadow-yellow-200 dark:group-hover:shadow-yellow-900">
               <Image
                 src="/images/construction.png"
                 alt="Construction neuve"
                 fill
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-70"></div>
+
             </div>
           </div>
         </div>

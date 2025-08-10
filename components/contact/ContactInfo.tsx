@@ -69,7 +69,7 @@ const ContactInfo: React.FC = () => {
             </svg>
           </div>
           <div>
-            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Heures d'ouverture</h5>
+            <h5 className="text-lg font-medium text-gray-900 dark:text-white">Heures d&apos;ouverture</h5>
             <p className="text-gray-600 dark:text-gray-400 mt-1">Lundi - Vendredi: 8h - 18h</p>
             <p className="text-gray-600 dark:text-gray-400">Samedi: 9h - 12h</p>
           </div>
