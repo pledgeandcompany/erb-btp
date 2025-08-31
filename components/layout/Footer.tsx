@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <Image 
-                src="/logo-transparent.png" 
+                src="/favicon-transparent.png" 
                 alt="ERB-BTP Logo" 
                 width={50} 
                 height={50} 
