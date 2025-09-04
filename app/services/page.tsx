@@ -32,7 +32,7 @@ export default function ServicesPage() {
       <ServiceExterieur />
       
       {/* CTA Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Prêt à démarrer votre projet ?
@@ -44,7 +44,7 @@ export default function ServicesPage() {
             <Button href="/contact" size="lg">
               Demander un devis
             </Button>
-            <Button href="/projects" variant="outline" size="lg" className="border-gray-800 text-gray-800 hover:bg-gray-100 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-800">
+            <Button href="/projects" variant="outline" size="lg">
               Voir nos réalisations
             </Button>
           </div>

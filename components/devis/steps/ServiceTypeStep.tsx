@@ -1,14 +1,16 @@
 'use client';
 
 import React from 'react';
+import { ValidationError } from '@/lib/form-validation';
 
 interface ServiceTypeStepProps {
   selectedType: string;
   projectType: string;
   onSelect: (type: string) => void;
+  errors?: Record<string, ValidationError>;
 }
 
-const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ selectedType, projectType, onSelect }) => {
+const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ selectedType, projectType, onSelect, errors = {} }) => {
   const serviceTypes = [
     {
       id: 'construction',
@@ -64,8 +66,8 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ selectedType, project
             className={`
               border rounded-lg p-4 cursor-pointer transition-all
               ${selectedType === service.id 
-                ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20' 
-                : 'border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-700'}
+                ? 'border-[#ff914d] bg-[#fff1e8] dark:bg-[#ff914d]/10' 
+                : 'border-gray-200 dark:border-gray-700 hover:border-[#ff914d]/50 dark:hover:border-[#ff914d]/50'}
             `}
             onClick={() => onSelect(service.id)}
           >
@@ -73,7 +75,7 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ selectedType, project
               <div className="flex-shrink-0 mr-4">
                 <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
                   selectedType === service.id 
-                    ? 'bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-300' 
+                    ? 'bg-[#fff1e8] dark:bg-[#ff914d]/20 text-[#ff914d]' 
                     : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400'
                 }`}>
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,6 +95,9 @@ const ServiceTypeStep: React.FC<ServiceTypeStepProps> = ({ selectedType, project
           </div>
         ))}
       </div>
+      {errors.serviceType && (
+        <p className="mt-4 text-sm text-red-600 dark:text-red-400">{errors.serviceType.message}</p>
+      )}
     </div>
   );
 };

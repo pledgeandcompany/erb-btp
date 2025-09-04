@@ -1,4 +1,5 @@
 import React from 'react';
+import MateriauxHero from '../../components/materiaux/MateriauxHero';
 import MateriauxDetails from '../../components/materiaux/MateriauxDetails';
 
 export const metadata = {
@@ -9,6 +10,7 @@ export const metadata = {
 export default function MateriauxPage() {
   return (
     <main className="pt-20 bg-white dark:bg-gray-900">
+      <MateriauxHero />
       <MateriauxDetails />
     </main>
   );

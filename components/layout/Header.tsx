@@ -46,7 +46,7 @@ const Header: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <ThemeToggle />
-            <Link href="/devis" className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium transition-colors">
+            <Link href="/devis" className="bg-[#ff914d] hover:bg-[#e07e3d] text-white px-4 py-2 rounded-md font-medium transition-colors">
               Devis Gratuit
             </Link>
           </div>
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
             </Link>
             <Link 
               href="/devis" 
-              className="mt-3 mb-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium text-center transition-colors"
+              className="mt-3 mb-2 bg-[#ff914d] hover:bg-[#e07e3d] text-white px-4 py-2 rounded-md font-medium text-center transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Devis Gratuit

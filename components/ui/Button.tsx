@@ -6,14 +6,14 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 disabled:opacity-50 disabled:pointer-events-none',
+  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff914d] disabled:opacity-50 disabled:pointer-events-none',
   {
     variants: {
       variant: {
-        default: 'bg-yellow-500 text-white hover:bg-yellow-600',
-        outline: 'border border-yellow-500 text-yellow-500 hover:bg-yellow-50 dark:hover:bg-gray-800',
-        ghost: 'hover:bg-yellow-50 text-yellow-500 dark:hover:bg-gray-800',
-        link: 'text-yellow-500 underline-offset-4 hover:underline',
+        default: 'bg-[#ff914d] text-white hover:bg-[#e07e3d]',
+        outline: 'border border-[#ff914d] text-[#ff914d] hover:bg-[#fff1e8] dark:hover:bg-gray-800',
+        ghost: 'hover:bg-[#fff1e8] text-[#ff914d] dark:hover:bg-gray-800',
+        link: 'text-[#ff914d] underline-offset-4 hover:underline',
         secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600',
       },
       size: {

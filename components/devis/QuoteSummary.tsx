@@ -102,18 +102,18 @@ const QuoteSummary: React.FC<QuoteSummaryProps> = ({
       </p>
 
       {/* Quote estimation */}
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg mb-8">
-        <h3 className="text-xl font-bold text-yellow-800 dark:text-yellow-300 mb-4">
+      <div className="bg-[#fff1e8] dark:bg-[#ff914d]/10 p-6 rounded-lg mb-8">
+        <h3 className="text-xl font-bold text-[#e07e3d] dark:text-[#ff914d] mb-4">
           Estimation de prix
         </h3>
         <div className="text-center">
-          <p className="text-sm text-yellow-700 dark:text-yellow-400 mb-2">
+          <p className="text-sm text-[#e07e3d] dark:text-[#ff914d]/90 mb-2">
             Basé sur les informations fournies, le coût estimé de votre projet est de :
           </p>
-          <div className="text-3xl font-bold text-yellow-900 dark:text-yellow-200 mb-2">
+          <div className="text-3xl font-bold text-[#ff914d] dark:text-[#ff914d] mb-2">
             {formatPrice(minPrice)} € - {formatPrice(maxPrice)} €
           </div>
-          <p className="text-xs text-yellow-700 dark:text-yellow-400 mb-4">
+          <p className="text-xs text-[#e07e3d] dark:text-[#ff914d]/80 mb-4">
             Cette estimation est donnée à titre indicatif et pourra être affinée lors de l&#39;étude détaillée de votre projet.
           </p>
         </div>
@@ -235,13 +235,13 @@ const QuoteSummary: React.FC<QuoteSummaryProps> = ({
               type="checkbox"
               checked={termsAccepted}
               onChange={() => setTermsAccepted(!termsAccepted)}
-              className="w-4 h-4 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-800 focus:ring-yellow-500"
+              className="w-4 h-4 border border-gray-300 dark:border-gray-700 rounded bg-white dark:bg-gray-800 focus:ring-[#ff914d]"
             />
           </div>
           <div className="ml-3 text-sm">
             <label htmlFor="terms" className="text-gray-600 dark:text-gray-300">
               J&#39;accepte que mes données soient utilisées pour me contacter au sujet de ma demande de devis. 
-              J&#39;ai lu et j&#39;accepte les <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:underline">conditions générales</a> et la <a href="#" className="text-yellow-600 dark:text-yellow-400 hover:underline">politique de confidentialité</a>.
+              J&#39;ai lu et j&#39;accepte les <a href="#" className="text-[#ff914d] hover:underline">conditions générales</a> et la <a href="#" className="text-[#ff914d] hover:underline">politique de confidentialité</a>.
             </label>
           </div>
         </div>

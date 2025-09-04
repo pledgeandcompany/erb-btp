@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { ValidationError } from '@/lib/form-validation';
 
 interface ProjectDetailsStepProps {
   details: {
@@ -9,10 +10,11 @@ interface ProjectDetailsStepProps {
     budget: string;
     description: string;
   };
-  onChange: (field: string, value: string) => void;
+  onChange: (field: 'location' | 'timeframe' | 'budget' | 'description', value: string) => void;
+  errors?: Record<string, ValidationError>;
 }
 
-const ProjectDetailsStep: React.FC<ProjectDetailsStepProps> = ({ details, onChange }) => {
+const ProjectDetailsStep: React.FC<ProjectDetailsStepProps> = ({ details, onChange, errors = {} }) => {
   const timeframeOptions = [
     { value: 'urgent', label: 'Urgent (< 1 mois)' },
     { value: 'soon', label: 'Prochainement (1-3 mois)' },
@@ -50,8 +52,11 @@ const ProjectDetailsStep: React.FC<ProjectDetailsStepProps> = ({ details, onChan
             value={details.location}
             onChange={(e) => onChange('location', e.target.value)}
             placeholder="Ville, code postal ou adresse"
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className={`w-full px-4 py-2 border ${errors.location ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-700'} rounded-md focus:ring-[#ff914d] focus:border-[#ff914d] bg-white dark:bg-gray-800 text-gray-900 dark:text-white`}
           />
+          {errors.location && (
+            <p className="mt-2 text-sm text-red-600 dark:text-red-400">{errors.location.message}</p>
+          )}
         </div>
 
         {/* Timeframe */}
@@ -63,7 +68,7 @@ const ProjectDetailsStep: React.FC<ProjectDetailsStepProps> = ({ details, onChan
             id="timeframe"
             value={details.timeframe}
             onChange={(e) => onChange('timeframe', e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className={`w-full px-4 py-2 border ${errors.timeframe ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-700'} rounded-md focus:ring-[#ff914d] focus:border-[#ff914d] bg-white dark:bg-gray-800 text-gray-900 dark:text-white`}
           >
             <option value="">Sélectionnez un délai</option>
             {timeframeOptions.map((option) => (
@@ -83,7 +88,7 @@ const ProjectDetailsStep: React.FC<ProjectDetailsStepProps> = ({ details, onChan
             id="budget"
             value={details.budget}
             onChange={(e) => onChange('budget', e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className={`w-full px-4 py-2 border ${errors.budget ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-700'} rounded-md focus:ring-[#ff914d] focus:border-[#ff914d] bg-white dark:bg-gray-800 text-gray-900 dark:text-white`}
           >
             <option value="">Sélectionnez un budget</option>
             {budgetOptions.map((option) => (
@@ -105,8 +110,11 @@ const ProjectDetailsStep: React.FC<ProjectDetailsStepProps> = ({ details, onChan
             onChange={(e) => onChange('description', e.target.value)}
             rows={4}
             placeholder="Décrivez votre projet en quelques mots (besoins spécifiques, contraintes, etc.)"
-            className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+            className={`w-full px-4 py-2 border ${errors.description ? 'border-red-500 dark:border-red-500' : 'border-gray-300 dark:border-gray-700'} rounded-md focus:ring-[#ff914d] focus:border-[#ff914d] bg-white dark:bg-gray-800 text-gray-900 dark:text-white`}
           />
+          {errors.description && (
+            <p className="mt-2 text-sm text-red-600 dark:text-red-400">{errors.description.message}</p>
+          )}
         </div>
       </div>
     </div>

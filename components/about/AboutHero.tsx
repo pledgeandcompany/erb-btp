@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AboutHero: React.FC = () => {
   return (
-    <section className="relative h-auto py-24 md:py-32 bg-white dark:bg-gray-800 flex items-center overflow-hidden">
+    <section className="relative h-auto py-24 md:py-32 bg-white dark:bg-gray-900 flex items-center overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5 dark:opacity-10">
         <div className="absolute inset-0 bg-repeat" style={{ backgroundImage: "url('/images/pattern.png')" }}></div>
@@ -15,7 +15,7 @@ const AboutHero: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Notre histoire
+              Notre <span className="text-[#ff914d]">histoire</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-600 dark:text-gray-300 max-w-2xl">
               Depuis plus de 25 ans, ERB-BTP s&#39;est imposé comme un acteur incontournable du secteur de la construction 
@@ -25,15 +25,15 @@ const AboutHero: React.FC = () => {
             
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
-                <span className="text-yellow-500 font-bold text-2xl mr-2">15+</span>
+                <span className="text-[#ff914d] font-bold text-2xl mr-2">15+</span>
                 <span className="text-gray-700 dark:text-gray-300">Années d&#39;expérience</span>
               </div>
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
-                <span className="text-yellow-500 font-bold text-2xl mr-2">100+</span>
+                <span className="text-[#ff914d] font-bold text-2xl mr-2">100+</span>
                 <span className="text-gray-700 dark:text-gray-300">Projets réalisés</span>
               </div>
               <div className="flex items-center bg-gray-50 dark:bg-gray-700 px-4 py-2 rounded-lg">
-                <span className="text-yellow-500 font-bold text-2xl mr-2">98%</span>
+                <span className="text-[#ff914d] font-bold text-2xl mr-2">98%</span>
                 <span className="text-gray-700 dark:text-gray-300">Clients satisfaits</span>
               </div>
             </div>
@@ -43,13 +43,14 @@ const AboutHero: React.FC = () => {
             <div className="relative rounded-lg shadow-xl overflow-hidden h-[400px] md:h-[500px]">
               <Image
                 src="/images/btp5.png"
-                alt="ERB-BTP équipe"
+                alt="L'équipe professionnelle d'ERB-BTP sur un chantier de construction à Montreuil, spécialistes en rénovation et construction"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             
-            <div className="absolute -bottom-6 -left-6 bg-yellow-500 text-white p-6 rounded-lg shadow-lg max-w-xs">
+            <div className="absolute -bottom-6 -left-6 bg-[#ff914d] text-white p-6 rounded-lg shadow-lg max-w-xs">
               <p className="text-lg font-bold mb-2">Notre mission</p>
               <p className="text-sm">Construire des espaces durables qui améliorent la qualité de vie de nos clients.</p>
             </div>

@@ -127,7 +127,7 @@ const Hero: React.FC<HeroProps> = ({
                   href={primaryButtonHref} 
                   variant="default"
                   size="lg"
-                  className="group relative overflow-hidden transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg bg-yellow-500 hover:bg-yellow-600 text-gray-900"
+                  className="group relative overflow-hidden transition-all duration-300 transform hover:translate-y-[-2px] hover:shadow-lg bg-[#ff914d] hover:bg-[#e07e3d] text-white"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     {primaryButtonText}

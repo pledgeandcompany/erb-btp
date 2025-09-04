@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
+import LoadingButton from '@/components/ui/LoadingButton';
 import ProjectTypeStep from './steps/ProjectTypeStep';
 import ServiceTypeStep from './steps/ServiceTypeStep';
 import ProjectDetailsStep from './steps/ProjectDetailsStep';
@@ -9,6 +10,9 @@ import SurfaceStep from './steps/SurfaceStep';
 import MaterialsStep from './steps/MaterialsStep';
 import ContactInfoStep from './steps/ContactInfoStep';
 import QuoteSummary from './QuoteSummary';
+import ToastContainer, { useToast } from '@/components/ui/ToastContainer';
+import { validateDevisStep, DevisFormData } from '@/lib/form-validation-devis';
+import { ValidationError } from '@/lib/form-validation';
 
 // Define the steps of the form
 const STEPS = {
@@ -66,11 +70,13 @@ const MATERIAL_MULTIPLIERS = {
 
 const DevisForm: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(STEPS.PROJECT_TYPE);
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState<DevisFormData>(initialFormData);
   const [estimatedPrice, setEstimatedPrice] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const [validationErrors, setValidationErrors] = useState<Record<string, ValidationError>>({});
+  const { addToast, toasts, removeToast } = useToast();
 
   // Calculate estimated price whenever relevant form data changes
   useEffect(() => {
@@ -91,7 +97,7 @@ const DevisForm: React.FC = () => {
   }, [formData.serviceType, formData.surface.area, formData.materials]);
 
   // Handle form data updates
-  const updateFormData = (field: string, value: unknown) => {
+  const updateFormData = <K extends keyof DevisFormData>(field: K, value: DevisFormData[K]) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -99,9 +105,13 @@ const DevisForm: React.FC = () => {
   };
 
   // Handle nested form data updates
-  const updateNestedFormData = (parent: string, field: string, value: unknown) => {
+  const updateNestedFormData = <K extends keyof DevisFormData, F extends keyof DevisFormData[K]>(
+    parent: K, 
+    field: F & string, 
+    value: DevisFormData[K][F]
+  ) => {
     setFormData(prev => {
-      const parentValue = prev[parent as keyof typeof prev];
+      const parentValue = prev[parent];
       const isObject = parentValue && typeof parentValue === 'object' && !Array.isArray(parentValue);
       return {
         ...prev,
@@ -113,8 +123,19 @@ const DevisForm: React.FC = () => {
     });
   };
 
-  // Navigate to next step
+  // Validate current step and navigate to next step if valid
   const nextStep = () => {
+    // Validate current step
+    const validationResult = validateDevisStep(currentStep, formData);
+    
+    if (!validationResult.valid) {
+      setValidationErrors(validationResult.errors);
+      addToast('Veuillez corriger les erreurs avant de continuer.', 'error');
+      return;
+    }
+    
+    // Clear validation errors and proceed to next step
+    setValidationErrors({});
     setCurrentStep(prev => Math.min(prev + 1, STEPS.SUMMARY));
   };
 
@@ -126,6 +147,16 @@ const DevisForm: React.FC = () => {
   // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate contact info step before submission
+    const validationResult = validateDevisStep(STEPS.CONTACT_INFO, formData);
+    
+    if (!validationResult.valid) {
+      setValidationErrors(validationResult.errors);
+      addToast('Veuillez corriger les erreurs dans vos coordonnées avant de soumettre.', 'error');
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitError('');
 
@@ -133,9 +164,15 @@ const DevisForm: React.FC = () => {
       // In a real application, you would send the form data to your backend here
       // For now, we'll simulate a successful submission after a delay
       await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      addToast('Votre demande de devis a été envoyée avec succès.', 'success');
+      
       setSubmitSuccess(true);
     } catch {
-      setSubmitError('Une erreur est survenue lors de l&#39;envoi du formulaire. Veuillez réessayer.');
+      const errorMessage = 'Une erreur est survenue lors de l\'envoi du formulaire. Veuillez réessayer.';
+      setSubmitError(errorMessage);
+      
+      addToast(errorMessage, 'error');
     } finally {
       setIsSubmitting(false);
     }
@@ -157,6 +194,7 @@ const DevisForm: React.FC = () => {
           <ProjectTypeStep 
             selectedType={formData.projectType} 
             onSelect={(value) => updateFormData('projectType', value)} 
+            errors={validationErrors}
           />
         );
       case STEPS.SERVICE_TYPE:
@@ -165,20 +203,23 @@ const DevisForm: React.FC = () => {
             selectedType={formData.serviceType} 
             projectType={formData.projectType}
             onSelect={(value) => updateFormData('serviceType', value)} 
+            errors={validationErrors}
           />
         );
       case STEPS.PROJECT_DETAILS:
         return (
           <ProjectDetailsStep 
             details={formData.projectDetails} 
-            onChange={(field, value) => updateNestedFormData('projectDetails', field, value)} 
+            onChange={(field, value) => updateNestedFormData('projectDetails', field as keyof typeof formData.projectDetails, value)} 
+            errors={validationErrors}
           />
         );
       case STEPS.SURFACE:
         return (
           <SurfaceStep 
             surface={formData.surface} 
-            onChange={(field, value) => updateNestedFormData('surface', field, value)} 
+            onChange={(field, value) => updateNestedFormData('surface', field as keyof typeof formData.surface, value)} 
+            errors={validationErrors}
           />
         );
       case STEPS.MATERIALS:
@@ -187,13 +228,15 @@ const DevisForm: React.FC = () => {
             selectedMaterials={formData.materials} 
             serviceType={formData.serviceType}
             onChange={(value) => updateFormData('materials', value)} 
+            errors={validationErrors}
           />
         );
       case STEPS.CONTACT_INFO:
         return (
           <ContactInfoStep 
             contactInfo={formData.contactInfo} 
-            onChange={(field, value) => updateNestedFormData('contactInfo', field, value)} 
+            onChange={(field, value) => updateNestedFormData('contactInfo', field as keyof typeof formData.contactInfo, value)} 
+            errors={validationErrors}
           />
         );
       case STEPS.SUMMARY:
@@ -216,8 +259,8 @@ const DevisForm: React.FC = () => {
     return (
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8">
         <div className="text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 dark:bg-green-900 mb-6">
-            <svg className="w-8 h-8 text-green-600 dark:text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#fff1e8] dark:bg-[#ff914d]/20 mb-6">
+            <svg className="w-8 h-8 text-[#ff914d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -246,12 +289,13 @@ const DevisForm: React.FC = () => {
   const progress = Math.round((currentStep / STEPS.SUMMARY) * 100);
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-0">
-      {/* Progress bar */}
+    <>
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-0">
+        {/* Progress bar */}
       <div className="mb-0">
         <div className="h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
           <div 
-            className="h-full bg-yellow-500 transition-all duration-300 ease-in-out" 
+            className="h-full bg-[#ff914d] transition-all duration-300 ease-in-out" 
             style={{ width: `${progress}%` }}
           ></div>
         </div>
@@ -279,8 +323,9 @@ const DevisForm: React.FC = () => {
         </Button>
         
         {currentStep < STEPS.SUMMARY ? (
-          <Button 
+          <LoadingButton 
             onClick={nextStep} 
+            isLoading={false}
             disabled={
               (currentStep === STEPS.PROJECT_TYPE && !formData.projectType) ||
               (currentStep === STEPS.SERVICE_TYPE && !formData.serviceType) ||
@@ -288,10 +333,12 @@ const DevisForm: React.FC = () => {
             }
           >
             Suivant
-          </Button>
+          </LoadingButton>
         ) : null}
       </div>
-    </div>
+      </div>
+      <ToastContainer toasts={toasts} removeToast={removeToast} />
+    </>
   );
 };
 

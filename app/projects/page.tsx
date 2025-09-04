@@ -72,7 +72,7 @@ export default function ProjectsPage() {
               Contactez-nous dès aujourd&#39;hui pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button href="/devis" size="lg">
+              <Button href="/devis" size="lg" className="bg-[#ff914d] hover:bg-[#e07e3d] text-white">
                 Demander un devis
               </Button>
               <Button href="/services" variant="outline" size="lg" className="border-gray-800 text-gray-800 hover:bg-gray-100 dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-800">

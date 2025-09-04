@@ -59,10 +59,10 @@ const Qualifications: React.FC = () => {
     return (
       <div 
         key={index}
-        className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 mb-4 border-l-4 border-yellow-500"
+        className="bg-white dark:bg-gray-700 rounded-lg shadow-md p-4 mb-4 border-l-4 border-[#ff914d] transition-all duration-300 hover:shadow-lg hover:translate-y-[-2px]"
       >
         <div className="flex justify-between items-start mb-2">
-          <span className="bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 text-xs font-medium px-2.5 py-0.5 rounded">
+          <span className="bg-[#fff1e8] dark:bg-[#5e3520] text-[#ff914d] dark:text-[#ff914d] text-xs font-medium px-2.5 py-0.5 rounded">
             {qualification.code}
           </span>
           <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -74,7 +74,7 @@ const Qualifications: React.FC = () => {
         </h3>
         {technicityLevel && (
           <div className="mt-2">
-            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-[#fff1e8] dark:bg-[#5e3520] text-[#ff914d] dark:text-[#ff914d]">
               Technicité {technicityLevel}
             </span>
           </div>
@@ -84,7 +84,7 @@ const Qualifications: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100 dark:bg-gray-800">
+    <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">Nos Qualifications Professionnelles</h2>
@@ -105,10 +105,10 @@ const Qualifications: React.FC = () => {
           </div>
         ) : (
           /* Desktop view: table (unchanged) */
-          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden max-w-4xl mx-auto">
+          <div className="bg-white dark:bg-gray-700 rounded-lg shadow-md overflow-hidden max-w-4xl mx-auto border border-gray-200 dark:border-gray-600">
             <div className="overflow-x-auto">
               <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
-                <thead className="bg-gray-800 text-white dark:bg-gray-900">
+                <thead className="bg-[#ff914d] text-white dark:bg-[#ff914d]">
                   <tr>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
                       Code
@@ -123,7 +123,7 @@ const Qualifications: React.FC = () => {
                 </thead>
                 <tbody className="bg-white dark:bg-gray-700 divide-y divide-gray-200 dark:divide-gray-600">
                   {qualifications.map((qualification, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800' : 'bg-white dark:bg-gray-700'}>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-50 dark:bg-gray-800 hover:bg-[#fff1e8] dark:hover:bg-[#5e3520]/30 transition-colors duration-200' : 'bg-white dark:bg-gray-700 hover:bg-[#fff1e8] dark:hover:bg-[#5e3520]/30 transition-colors duration-200'}>
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-black dark:text-white">
                         {qualification.code}
                       </td>
@@ -136,7 +136,7 @@ const Qualifications: React.FC = () => {
                     </tr>
                   ))}
                 </tbody>
-                <tfoot className="bg-gray-100 dark:bg-gray-800">
+                <tfoot className="bg-[#fff1e8] dark:bg-[#5e3520]">
                   <tr>
                     <td colSpan={3} className="px-6 py-3 text-sm text-gray-700 dark:text-gray-300">
                       Nombre total de qualifications: {qualifications.length}

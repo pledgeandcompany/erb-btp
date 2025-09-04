@@ -1,16 +1,18 @@
 'use client';
 
 import React, { useState } from 'react';
+import { ValidationError } from '@/lib/form-validation';
 
 interface SurfaceStepProps {
   surface: {
     area: number;
     unit: string;
   };
-  onChange: (field: string, value: number) => void;
+  onChange: (field: 'area' | 'unit', value: number | string) => void;
+  errors?: Record<string, ValidationError>;
 }
 
-const SurfaceStep: React.FC<SurfaceStepProps> = ({ surface, onChange }) => {
+const SurfaceStep: React.FC<SurfaceStepProps> = ({ surface, onChange, errors = {} }) => {
   const [error, setError] = useState('');
 
   const handleAreaChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,22 +57,22 @@ const SurfaceStep: React.FC<SurfaceStepProps> = ({ surface, onChange }) => {
               placeholder="Ex: 120"
               min="1"
               max="10000"
-              className="flex-grow px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-l-md focus:ring-yellow-500 focus:border-yellow-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+              className="flex-grow px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-l-md focus:ring-[#ff914d] focus:border-[#ff914d] bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
             />
             <span className="inline-flex items-center px-4 py-2 border border-l-0 border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-r-md">
               m²
             </span>
           </div>
-          {error && (
-            <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error}</p>
+          {(error || errors.area) && (
+            <p className="mt-2 text-sm text-red-600 dark:text-red-400">{error || (errors.area && errors.area.message)}</p>
           )}
         </div>
 
-        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-md">
-          <h3 className="text-sm font-medium text-yellow-800 dark:text-yellow-300 mb-2">
+        <div className="bg-[#fff1e8] dark:bg-[#ff914d]/10 p-4 rounded-md">
+          <h3 className="text-sm font-medium text-[#e07e3d] dark:text-[#ff914d] mb-2">
             Pourquoi avons-nous besoin de cette information ?
           </h3>
-          <p className="text-sm text-yellow-700 dark:text-yellow-400">
+          <p className="text-sm text-[#e07e3d] dark:text-[#ff914d]/90">
             La surface est un élément essentiel pour estimer le coût de votre projet. 
             Plus la surface est précise, plus notre estimation sera fiable.
           </p>

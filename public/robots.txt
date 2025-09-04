@@ -1,0 +1,25 @@
+# ERB-BTP Robots.txt
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /_next/
+Disallow: /*?*
+
+# Specific rules for Googlebot
+User-agent: Googlebot
+Allow: /*.js
+Allow: /*.css
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /*.js
+Allow: /*.css
+
+# Sitemap location
+Sitemap: https://www.erb-btp.com/sitemap.xml

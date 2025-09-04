@@ -1,14 +1,16 @@
 'use client';
 
 import React from 'react';
+import { ValidationError } from '@/lib/form-validation';
 // import Image from 'next/image'; // Removed unused import
 
 interface ProjectTypeStepProps {
   selectedType: string;
   onSelect: (type: string) => void;
+  errors?: Record<string, ValidationError>;
 }
 
-const ProjectTypeStep: React.FC<ProjectTypeStepProps> = ({ selectedType, onSelect }) => {
+const ProjectTypeStep: React.FC<ProjectTypeStepProps> = ({ selectedType, onSelect, errors = {} }) => {
   const projectTypes = [
     {
       id: 'residential',
@@ -46,8 +48,8 @@ const ProjectTypeStep: React.FC<ProjectTypeStepProps> = ({ selectedType, onSelec
             className={`
               border rounded-lg p-6 cursor-pointer transition-all
               ${selectedType === type.id 
-                ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20' 
-                : 'border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-700'}
+                ? 'border-[#ff914d] bg-[#fff1e8] dark:bg-[#ff914d]/10' 
+                : 'border-gray-200 dark:border-gray-700 hover:border-[#ff914d]/50 dark:hover:border-[#ff914d]/50'}
             `}
             onClick={() => onSelect(type.id)}
           >
@@ -55,7 +57,7 @@ const ProjectTypeStep: React.FC<ProjectTypeStepProps> = ({ selectedType, onSelec
               <div className="w-16 h-16 mb-4 relative">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg 
-                    className={`w-12 h-12 ${selectedType === type.id ? 'text-yellow-500' : 'text-gray-400 dark:text-gray-500'}`} 
+                    className={`w-12 h-12 ${selectedType === type.id ? 'text-[#ff914d]' : 'text-gray-400 dark:text-gray-500'}`} 
                     fill="none" 
                     viewBox="0 0 24 24" 
                     stroke="currentColor"
@@ -97,6 +99,9 @@ const ProjectTypeStep: React.FC<ProjectTypeStepProps> = ({ selectedType, onSelec
           </div>
         ))}
       </div>
+      {errors.projectType && (
+        <p className="mt-4 text-sm text-red-600 dark:text-red-400">{errors.projectType.message}</p>
+      )}
     </div>
   );
 };

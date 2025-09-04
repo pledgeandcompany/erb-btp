@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const AboutHistory: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900">
+    <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">Notre Histoire</h2>
@@ -18,10 +18,11 @@ const AboutHistory: React.FC = () => {
           <div className="relative rounded-lg overflow-hidden shadow-xl">
             <Image
               src="/images/btp4.png"
-              alt="Histoire d&#39;ERB-BTP"
+              alt="Évolution historique d'ERB-BTP depuis 1995 - Entreprise de construction et rénovation en Île-de-France fondée par Ali Tombari"
               width={600}
               height={400}
               className="object-cover w-full"
+              loading="eager"
             />
           </div>
           
@@ -29,7 +30,7 @@ const AboutHistory: React.FC = () => {
             <div className="space-y-8">
               <div>
                 <div className="flex items-center mb-2">
-                  <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-full bg-[#ff914d] flex items-center justify-center text-white font-bold">
                     1995
                   </div>
                   <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Fondation</h3>
@@ -42,7 +43,7 @@ const AboutHistory: React.FC = () => {
               
               <div>
                 <div className="flex items-center mb-2">
-                  <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-full bg-[#ff914d] flex items-center justify-center text-white font-bold">
                     2005
                   </div>
                   <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Expansion</h3>
@@ -55,7 +56,7 @@ const AboutHistory: React.FC = () => {
               
               <div>
                 <div className="flex items-center mb-2">
-                  <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-full bg-[#ff914d] flex items-center justify-center text-white font-bold">
                     2015
                   </div>
                   <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Innovation</h3>
@@ -68,7 +69,7 @@ const AboutHistory: React.FC = () => {
               
               <div>
                 <div className="flex items-center mb-2">
-                  <div className="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-full bg-[#ff914d] flex items-center justify-center text-white font-bold">
                     2023
                   </div>
                   <h3 className="text-xl font-bold ml-4 text-gray-900 dark:text-white">Aujourd&#39;hui</h3>

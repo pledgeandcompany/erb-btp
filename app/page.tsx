@@ -5,7 +5,24 @@ import Qualifications from '@/components/home/Qualifications';
 import Collaborations from '@/components/home/Collaborations';
 import ServiceCarousel from '@/components/ui/ServiceCarousel';
 import { Button } from '@/components/ui/Button';
-import Script from 'next/script';
+import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
+import { generateMetadata } from '@/lib/seo-utils';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'ERB-BTP | Construction et Rénovation à Paris et Île-de-France',
+  description: 'Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement. Plus de 20 ans d\'expertise en Île-de-France.',
+  keywords: ['construction', 'rénovation', 'maçonnerie', 'étanchéité', 'isolation', 'ravalement', 'BTP', 'Paris', 'Île-de-France'],
+  openGraph: {
+    images: [{
+      url: '/images/hero-construction.png',
+      width: 1200,
+      height: 630,
+      alt: 'ERB-BTP Construction et Rénovation'
+    }],
+    type: 'website'
+  }
+});
 
 export default function Home() {
   // Services data
@@ -82,7 +99,7 @@ export default function Home() {
       />
 
       {/* Services Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <SectionTitle 
             title="Nos Services"
@@ -97,7 +114,7 @@ export default function Home() {
       <Qualifications />
 
       {/* Projects Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <SectionTitle 
             title="Nos Réalisations"
@@ -122,10 +139,10 @@ export default function Home() {
       <Collaborations />
 
       {/* Contact CTA Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black dark:text-white">Prêt à démarrer votre projet?</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
             Contactez-nous dès aujourd&#39;hui pour discuter de votre projet et découvrir comment ERB-BTP peut vous aider à le réaliser.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
@@ -139,32 +156,32 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Script
-        id="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "ERB-BTP",
-            "image": "/images/logo-erb-btp.png",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "86 Rue Voltaire",
-              "addressLocality": "Montreuil",
-              "addressRegion": "Île-de-France",
-              "postalCode": "93100",
-              "addressCountry": "France"
-            },
-            "telephone": "+33 6 29 83 94 71",
-            "openingHours": "Mo-Fr 09:00-18:00",
-            "sameAs": [
-              "https://www.erb-btp.com",
-              "https://www.facebook.com/erb-btp",
-              "https://www.instagram.com/erb_btp"
-            ]
-          }),
+      <LocalBusinessSchema 
+        name="ERB-BTP"
+        description="Entreprise de construction et rénovation spécialisée en maçonnerie, étanchéité, isolation et ravalement."
+        telephone="+33 6 29 83 94 71"
+        email="contact@erb-btp.com"
+        url="https://www.erb-btp.com"
+        logo="/images/logo-erb-btp.png"
+        image="/images/hero-construction.png"
+        address={{
+          streetAddress: "86 Rue Voltaire",
+          addressLocality: "Montreuil",
+          postalCode: "93100",
+          addressCountry: "FR"
         }}
+        openingHours={[
+          {
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '09:00',
+            closes: '18:00'
+          }
+        ]}
+        sameAs={[
+          "https://www.erb-btp.com",
+          "https://www.facebook.com/erb-btp",
+          "https://www.instagram.com/erb_btp"
+        ]}
       />
     </>
   );

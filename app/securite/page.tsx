@@ -1,4 +1,5 @@
 import React from 'react';
+import SecuriteHero from '../../components/securite/SecuriteHero';
 import SecuriteDetails from '../../components/securite/SecuriteDetails';
 
 export const metadata = {
@@ -9,6 +10,7 @@ export const metadata = {
 export default function SecuritePage() {
   return (
     <main className="pt-20 bg-white dark:bg-gray-900">
+      <SecuriteHero />
       <SecuriteDetails />
     </main>
   );

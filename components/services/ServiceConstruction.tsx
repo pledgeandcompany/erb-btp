@@ -6,11 +6,11 @@ import { CheckCircle2, Building2 } from 'lucide-react';
 
 const ServiceConstruction: React.FC = () => {
   return (
-    <section id="construction" className="py-20 bg-white dark:bg-gray-800">
+    <section id="construction" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Service Header with Accent Bar */}
         <div className="flex items-center mb-12">
-          <div className="h-1 w-12 bg-yellow-500 mr-4"></div>
+          <div className="h-1 w-12 bg-[#ff914d] mr-4"></div>
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
             Construction Neuve
           </h2>
@@ -29,8 +29,8 @@ const ServiceConstruction: React.FC = () => {
             {/* Service Features */}
             <div className="bg-gray-50 dark:bg-gray-700/50 p-6 rounded-xl border border-gray-100 dark:border-gray-600">
               <h3 className="text-xl font-semibold mb-5 text-gray-800 dark:text-gray-100 flex items-center">
-                <span className="bg-yellow-100 dark:bg-yellow-900 p-2 rounded-full mr-3">
-                  <Building2 className="h-5 w-5 text-yellow-600 dark:text-yellow-400" />
+                <span className="bg-[#fff1e8] dark:bg-[#5e3520] p-2 rounded-full mr-3">
+                  <Building2 className="h-5 w-5 text-[#ff914d] dark:text-[#ff914d]" />
                 </span>
                 Nos prestations de construction comprennent :
               </h3>
@@ -43,7 +43,7 @@ const ServiceConstruction: React.FC = () => {
                   "Respect des normes RT 2020 et BBC"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start transition-all duration-200 hover:translate-x-1">
-                    <CheckCircle2 className="h-6 w-6 mr-3 text-yellow-500 flex-shrink-0" />
+                    <CheckCircle2 className="h-6 w-6 mr-3 text-[#ff914d] flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">{item}</span>
                   </li>
                 ))}
@@ -55,8 +55,8 @@ const ServiceConstruction: React.FC = () => {
           
           {/* Right Column - Image with Overlay */}
           <div className="order-1 lg:order-2 relative group">
-            <div className="absolute inset-0 bg-yellow-500 transform translate-x-3 translate-y-3 rounded-lg transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
-            <div className="relative rounded-lg overflow-hidden shadow-2xl h-[450px] transition-all duration-300 group-hover:shadow-yellow-200 dark:group-hover:shadow-yellow-900">
+            <div className="absolute inset-0 bg-[#ff914d] transform translate-x-3 translate-y-3 rounded-lg transition-transform group-hover:translate-x-5 group-hover:translate-y-5"></div>
+            <div className="relative rounded-lg overflow-hidden shadow-2xl h-[450px] transition-all duration-300 group-hover:shadow-[#fff1e8] dark:group-hover:shadow-[#5e3520]">
               <Image
                 src="/images/construction.png"
                 alt="Construction neuve"

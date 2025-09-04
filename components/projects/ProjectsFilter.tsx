@@ -51,7 +51,7 @@ const ProjectsFilter: React.FC<ProjectsFilterProps> = ({
             onClick={() => onCategoryChange(category.id)}
             className={`px-6 py-2 rounded-full transition-colors ${
               activeCategory === category.id
-                ? 'bg-yellow-500 text-white'
+                ? 'bg-[#ff914d] text-white'
                 : 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600'
             }`}
           >

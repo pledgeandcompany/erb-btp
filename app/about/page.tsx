@@ -3,15 +3,30 @@ import AboutHero from '@/components/about/AboutHero';
 import AboutHistory from '@/components/about/AboutHistory';
 import AboutValues from '@/components/about/AboutValues';
 import { Button } from '@/components/ui/Button';
+import AboutPageSchema from '@/components/seo/AboutPageSchema';
+import { generateMetadata } from '@/lib/seo-utils';
+import type { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'À propos | ERB-BTP Construction et Rénovation',
-  description: 'Découvrez l&#39;histoire, les valeurs et l&#39;équipe d&#39;ERB-BTP, votre partenaire de confiance pour tous vos projets de construction et rénovation depuis 1995.',
-};
+  description: 'Découvrez l\'histoire, les valeurs et l\'équipe d\'ERB-BTP, votre partenaire de confiance pour tous vos projets de construction et rénovation depuis 1995.',
+  path: '/about',
+  keywords: ['ERB-BTP', 'histoire', 'valeurs', 'équipe', 'entreprise construction', 'rénovation', 'Montreuil', 'Paris', 'Île-de-France'],
+  openGraph: {
+    images: [{
+      url: '/images/about-hero.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'L\'équipe ERB-BTP'
+    }],
+    type: 'website'
+  }
+});
 
 export default function AboutPage() {
   return (
     <main>
+      <AboutPageSchema />
       {/* Hero Section */}
       <AboutHero />
       
@@ -22,7 +37,7 @@ export default function AboutPage() {
       <AboutValues />
       
       {/* CTA Section */}
-      <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Prêt à travailler avec nous ?

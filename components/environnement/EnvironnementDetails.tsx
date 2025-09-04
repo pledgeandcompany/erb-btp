@@ -1,25 +1,34 @@
 'use client';
 
 import React from 'react';
+import { Button } from '../ui/Button';
 
 const EnvironnementDetails: React.FC = () => {
   return (
-    <div className="py-12 bg-white dark:bg-gray-900">
+    <section className="py-12 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="mb-12 text-center animate-fade-in">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Notre engagement environnemental
+              Notre <span className="text-[#ff914d]">engagement environnemental</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
               Des solutions pratiques pour limiter l&apos;impact de nos chantiers sur l&apos;environnement
             </p>
+            <div className="w-24 h-1 bg-[#ff914d] mx-auto mt-6"></div>
           </div>
 
           {/* Sensibiliser et responsabiliser */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Sensibiliser et responsabiliser</h3>
-            <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm mb-8">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                </svg>
+              </span>
+              Sensibiliser et responsabiliser
+            </h3>
+            <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border-l-4 border-[#ff914d] mb-8">
               <p className="text-gray-600 dark:text-gray-400 mb-4">
                 Tout chantier génère des impacts et nuisances sur l&apos;environnement.
               </p>
@@ -40,7 +49,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Charte Chantier Vert */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Charte Chantier Vert</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              Charte Chantier Vert
+            </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Cette charte a pour objectif de :
             </p>
@@ -54,7 +70,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Informations des riverains */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Informations des riverains</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+                </svg>
+              </span>
+              Informations des riverains
+            </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Affichage des informations suivantes :
             </p>
@@ -69,7 +92,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Informations aux personnels */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Informations aux personnels</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </span>
+              Informations aux personnels
+            </h3>
             <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Formations internes</h4>
             <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-400 space-y-2">
               <li>Formation et sensibilisation de notre personnel tous les 6 mois, sous forme d&apos;atelier sur les risques liés à l&apos;environnement</li>
@@ -87,7 +117,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Organisation générale du chantier */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Organisation générale du chantier</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </span>
+              Organisation générale du chantier
+            </h3>
             
             <div className="mb-8">
               <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Stationnement</h4>
@@ -120,7 +157,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Choix des matériaux */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Choix des matériaux</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                </svg>
+              </span>
+              Choix des matériaux
+            </h3>
             <p className="text-gray-600 dark:text-gray-400">
               Notre démarche environnementale est traduite par une attention particulière sur le choix des matériaux et le respect des prescriptions du cahier des charges pour les techniques et les matières : les matériaux sont commandés dans les usines au plus proches des chantiers afin d&apos;éviter le surcroît de gas-oil. Des variantes techniques plus élaborées sont proposées au niveau des appels d&apos;offres.
             </p>
@@ -128,7 +172,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Véhicules propres */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Véhicules propres</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </span>
+              Véhicules propres
+            </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-4">
               Nous avons fait le choix de renouveler régulièrement nos véhicules répondant aux critères suivants :
             </p>
@@ -143,7 +194,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Gestion des déchets */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Gestion des déchets</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                </svg>
+              </span>
+              Gestion des déchets
+            </h3>
             
             <div className="mb-8">
               <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Notre action</h4>
@@ -221,7 +279,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Limitation des pollutions */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Limitation des pollutions</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </span>
+              Limitation des pollutions
+            </h3>
             <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-400 space-y-2">
               <li>Ne pas prélever d&apos;eau sur les poteaux ou bouches d&apos;incendies</li>
               <li>Entretenir les matériels et les véhicules</li>
@@ -231,7 +296,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Limitation du bruit */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Limitation du bruit</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+              </span>
+              Limitation du bruit
+            </h3>
             <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-400 space-y-2">
               <li>Limiter l&apos;usage des avertisseurs sonores au seul risque immédiat</li>
               <li>Poster les matériels très bruyants le plus à l&apos;écart possible des habitations</li>
@@ -248,7 +320,14 @@ const EnvironnementDetails: React.FC = () => {
 
           {/* Nos gestes au quotidien */}
           <section className="mb-16 animate-fade-in">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Nos gestes au quotidien</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center">
+              <span className="text-[#ff914d] mr-3">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </span>
+              Nos gestes au quotidien
+            </h3>
             <ul className="list-disc pl-6 mb-4 text-gray-600 dark:text-gray-400 space-y-2">
               <li>Utilisation de matériaux recyclables</li>
               <li>Limitation des emballages du matériel</li>
@@ -264,9 +343,24 @@ const EnvironnementDetails: React.FC = () => {
               <li>Sensibilisation des collaborateurs aux gestes écologiques au quotidien (photocopies recto-verso, usage du papier recyclé, extinction des lumières…)</li>
             </ul>
           </section>
+          {/* CTA Section */}
+          <section className="mt-20 mb-10 animate-fade-in">
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-8 text-center border border-[#ff914d]/20">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Vous souhaitez en savoir plus sur notre engagement environnemental ?</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
+                Contactez-nous pour discuter de vos projets et découvrir comment notre approche écologique peut bénéficier à votre chantier.  
+              </p>
+              <Button href="/contact" className="bg-[#ff914d] hover:bg-[#e87f3a] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center">
+                Nous contacter
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Button>
+            </div>
+          </section>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

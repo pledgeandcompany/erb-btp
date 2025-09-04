@@ -8,26 +8,28 @@ const FaqItem = ({ question, answer }: { question: string; answer: string }) => 
   const [isOpen, setIsOpen] = useState(false);
   
   return (
-    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden border border-gray-100 dark:border-gray-600">
+    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg overflow-hidden border border-gray-100 dark:border-gray-600 shadow-sm hover:shadow-md transition-all duration-300 mb-4 hover:bg-white dark:hover:bg-gray-600">
       <button
-        className="w-full flex justify-between items-center p-5 text-left focus:outline-none"
+        className="w-full flex justify-between items-center p-5 text-left focus:outline-none group"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{question}</h3>
-        <span className="ml-4">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors duration-300">{question}</h3>
+        <span className="ml-4 bg-gray-100 dark:bg-gray-700 rounded-full p-1 group-hover:bg-yellow-100 dark:group-hover:bg-yellow-900 transition-colors duration-300">
           {isOpen ? (
-            <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+            <ChevronUp className="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors duration-300" />
           ) : (
-            <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400" />
+            <ChevronDown className="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors duration-300" />
           )}
         </span>
       </button>
       
-      {isOpen && (
-        <div className="p-5 pt-0 border-t border-gray-100 dark:border-gray-600">
-          <p className="text-gray-600 dark:text-gray-400">{answer}</p>
+      <div 
+        className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+      >
+        <div className="p-5 pt-3 border-t border-gray-100 dark:border-gray-600 bg-white/50 dark:bg-gray-800/50">
+          <p className="text-gray-600 dark:text-gray-300">{answer}</p>
         </div>
-      )}
+      </div>
     </div>
   );
 };

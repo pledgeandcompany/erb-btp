@@ -1,14 +1,16 @@
 'use client';
 
 import React from 'react';
+import { ValidationError } from '@/lib/form-validation';
 
 interface MaterialsStepProps {
   selectedMaterials: string[];
   serviceType: string;
   onChange: (materials: string[]) => void;
+  errors?: Record<string, ValidationError>;
 }
 
-const MaterialsStep: React.FC<MaterialsStepProps> = ({ selectedMaterials, serviceType, onChange }) => {
+const MaterialsStep: React.FC<MaterialsStepProps> = ({ selectedMaterials, serviceType, onChange, errors = {} }) => {
   // Define material options based on service type
   const getMaterialOptions = () => {
     switch (serviceType) {
@@ -80,8 +82,8 @@ const MaterialsStep: React.FC<MaterialsStepProps> = ({ selectedMaterials, servic
             className={`
               border rounded-lg p-4 cursor-pointer transition-all
               ${selectedMaterials.includes(material.id) 
-                ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20' 
-                : 'border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-700'}
+                ? 'border-[#ff914d] bg-[#fff1e8] dark:bg-[#ff914d]/10' 
+                : 'border-gray-200 dark:border-gray-700 hover:border-[#ff914d]/50 dark:hover:border-[#ff914d]/50'}
             `}
             onClick={() => handleMaterialSelect(material.id)}
           >
@@ -89,7 +91,7 @@ const MaterialsStep: React.FC<MaterialsStepProps> = ({ selectedMaterials, servic
               <div className="flex items-center">
                 <div className={`w-5 h-5 rounded-full border flex-shrink-0 mr-4 flex items-center justify-center ${
                   selectedMaterials.includes(material.id)
-                    ? 'border-yellow-500 bg-yellow-500'
+                    ? 'border-[#ff914d] bg-[#ff914d]'
                     : 'border-gray-300 dark:border-gray-600'
                 }`}>
                   {selectedMaterials.includes(material.id) && (
@@ -117,15 +119,18 @@ const MaterialsStep: React.FC<MaterialsStepProps> = ({ selectedMaterials, servic
         ))}
       </div>
 
-      <div className="mt-8 bg-blue-50 dark:bg-blue-900/20 p-4 rounded-md">
-        <h3 className="text-sm font-medium text-blue-800 dark:text-blue-300 mb-2">
+      <div className="mt-8 bg-[#fff1e8] dark:bg-[#ff914d]/10 p-4 rounded-md">
+        <h3 className="text-sm font-medium text-[#e07e3d] dark:text-[#ff914d] mb-2">
           Impact sur le prix
         </h3>
-        <p className="text-sm text-blue-700 dark:text-blue-400">
+        <p className="text-sm text-[#e07e3d] dark:text-[#ff914d]/90">
           Le choix des matériaux influence directement le coût final de votre projet. 
           Les matériaux premium et luxe offrent une meilleure durabilité et des finitions plus soignées.
         </p>
       </div>
+      {errors.materials && (
+        <p className="mt-4 text-sm text-red-600 dark:text-red-400">{errors.materials.message}</p>
+      )}
     </div>
   );
 };

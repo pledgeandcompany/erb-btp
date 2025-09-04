@@ -111,10 +111,10 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, projectDetails })
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2 h-full">
         <div className="p-6 h-full flex flex-col">
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] transition-colors">
               {project.title}
             </h3>
-            <span className="inline-block px-3 py-1 text-xs font-medium bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full">
+            <span className="inline-block px-3 py-1 text-xs font-medium bg-[#fff1e8] dark:bg-[#5e3520] text-[#ff914d] dark:text-[#ff914d] rounded-full">
               {project.category}
             </span>
           </div>
@@ -132,7 +132,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, projectDetails })
             <span>{project.year}</span>
           </div>
           <div className="mt-auto">
-            <span className="text-yellow-600 dark:text-yellow-400 font-medium text-sm flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-[#ff914d] dark:text-[#ff914d] font-medium text-sm flex items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               Voir les détails
               <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -210,7 +210,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, projectDetails })
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-transform duration-300 h-full">
                 <div className="p-6 h-full flex flex-col">
                   <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-yellow-600 dark:group-hover:text-yellow-400 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] transition-colors">
                       {projects[currentSlide].title}
                     </h3>
                   </div>
@@ -228,7 +228,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, projectDetails })
                     <span>{projects[currentSlide].year}</span>
                   </div>
                   <div className="mt-auto">
-                    <span className="text-yellow-600 dark:text-yellow-400 font-medium text-sm flex items-center group-hover:underline">
+                    <span className="text-[#ff914d] dark:text-[#ff914d] font-medium text-sm flex items-center group-hover:underline">
                       Voir les détails
                       <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
