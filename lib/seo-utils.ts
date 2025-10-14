@@ -67,16 +67,23 @@ export function generateMetadata({
       siteName: openGraph.siteName || 'ERB-BTP',
       locale: openGraph.locale || 'fr_FR',
       type: (openGraph.type as "website" | "article" | "book" | "profile") || 'website',
-      ...(openGraph.images && { images: openGraph.images }),
+      images: openGraph.images || [
+        {
+          url: '/og-logo.png',
+          width: 1200,
+          height: 630,
+          alt: 'ERB-BTP Construction et Rénovation',
+        }
+      ],
     },
     twitter: {
       card: twitter.card || 'summary_large_image',
       site: twitter.site || '@erbbtp',
       title,
       description,
-      ...(openGraph.images && { 
-        images: openGraph.images.map(img => typeof img === 'string' ? img : img.url) 
-      }),
+      images: openGraph.images 
+        ? openGraph.images.map(img => typeof img === 'string' ? img : img.url)
+        : ['/og-logo.png'],
     },
     robots: {
       index: robots.index !== false,
