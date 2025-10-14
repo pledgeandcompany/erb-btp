@@ -14,10 +14,10 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['contact', 'devis', 'ERB-BTP', 'construction', 'rénovation', 'Paris', 'Île-de-France', 'formulaire de contact'],
   openGraph: {
     images: [{
-      url: '/images/contact-hero.jpg',
+      url: '/og-logo.png',
       width: 1200,
       height: 630,
-      alt: 'Contactez ERB-BTP'
+      alt: 'ERB-BTP Construction et Rénovation'
     }],
     type: 'website'
   }

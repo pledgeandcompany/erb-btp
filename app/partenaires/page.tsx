@@ -10,10 +10,10 @@ export const metadata: Metadata = generateMetadata({
   keywords: ["partenaires", "fournisseurs", "collaborations", "ERB-BTP", "construction", "rénovation", "partenaires commerciaux"],
   openGraph: {
     images: [{
-      url: "/images/partners-hero.jpg",
+      url: "/og-logo.png",
       width: 1200,
       height: 630,
-      alt: "Partenaires ERB-BTP"
+      alt: "ERB-BTP Construction et Rénovation"
     }],
     type: "website"
   }

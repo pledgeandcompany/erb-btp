@@ -14,10 +14,10 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['ERB-BTP', 'histoire', 'valeurs', 'équipe', 'entreprise construction', 'rénovation', 'Montreuil', 'Paris', 'Île-de-France'],
   openGraph: {
     images: [{
-      url: '/images/about-hero.jpg',
+      url: '/og-logo.png',
       width: 1200,
       height: 630,
-      alt: 'L\'équipe ERB-BTP'
+      alt: 'ERB-BTP Construction et Rénovation'
     }],
     type: 'website'
   }

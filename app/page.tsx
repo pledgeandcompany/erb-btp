@@ -15,7 +15,7 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['construction', 'rénovation', 'maçonnerie', 'étanchéité', 'isolation', 'ravalement', 'BTP', 'Paris', 'Île-de-France'],
   openGraph: {
     images: [{
-      url: '/images/hero-construction.png',
+      url: '/og-logo.png',
       width: 1200,
       height: 630,
       alt: 'ERB-BTP Construction et Rénovation'

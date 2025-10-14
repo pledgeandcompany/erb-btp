@@ -12,10 +12,10 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['devis', 'estimation', 'construction', 'rénovation', 'aménagement', 'ERB-BTP', 'prix', 'tarifs', 'travaux', 'bâtiment'],
   openGraph: {
     images: [{
-      url: '/images/devis-hero.jpg',
+      url: '/og-logo.png',
       width: 1200,
       height: 630,
-      alt: 'Demande de devis ERB-BTP'
+      alt: 'ERB-BTP Construction et Rénovation'
     }],
     type: 'website'
   }

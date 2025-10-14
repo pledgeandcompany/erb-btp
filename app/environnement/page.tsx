@@ -12,10 +12,10 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['environnement', 'chantier vert', 'construction durable', 'ERB-BTP', 'éco-construction', 'responsabilité environnementale', 'développement durable'],
   openGraph: {
     images: [{
-      url: '/images/environnement-hero.jpg',
+      url: '/og-logo.png',
       width: 1200,
       height: 630,
-      alt: 'Engagement environnemental ERB-BTP'
+      alt: 'ERB-BTP Construction et Rénovation'
     }],
     type: 'website'
   }
