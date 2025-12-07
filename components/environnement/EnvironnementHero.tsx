@@ -48,7 +48,7 @@ const EnvironnementHero: React.FC = () => {
           <div className="md:w-1/2 relative">
             <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/btp1.png"
+                src="/images/environnement.svg"
                 alt="Chantier écologique ERB-BTP avec pratiques durables - Tri sélectif des déchets et utilisation de matériaux respectueux de l'environnement"
                 fill
                 className="object-cover"

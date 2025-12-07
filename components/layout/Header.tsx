@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ThemeToggle from '../theme/ThemeToggle';
+  import { useTheme } from '../theme/ThemeProvider';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -45,7 +47,7 @@ const Header: React.FC = () => {
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
+            {theme !== 'light' && <ThemeToggle />}
             <Link href="/devis" className="bg-[#ff914d] hover:bg-[#e07e3d] text-white px-4 py-2 rounded-md font-medium transition-colors">
               Devis Gratuit
             </Link>
@@ -53,7 +55,7 @@ const Header: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
-            <ThemeToggle className="mr-2" />
+            {theme !== 'light' && <ThemeToggle className="mr-2" />}
             <button
               onClick={toggleMenu}
               className="text-gray-600 dark:text-gray-300 focus:outline-none"

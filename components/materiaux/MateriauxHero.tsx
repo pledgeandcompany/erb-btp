@@ -58,7 +58,7 @@ const MateriauxHero: React.FC = () => {
           <div className="relative h-64 md:h-96 lg:h-full rounded-xl overflow-hidden animate-fade-in">
             <div className="absolute inset-0 bg-gradient-to-r from-[#ff914d]/30 to-transparent z-10 rounded-xl"></div>
             <Image
-              src="/images/materiaux-hero.jpg"
+              src="/images/materiaux.svg"
               alt="Équipements et matériaux de construction"
               fill
               priority

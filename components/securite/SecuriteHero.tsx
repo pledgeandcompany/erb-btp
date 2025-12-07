@@ -48,7 +48,7 @@ const SecuriteHero: React.FC = () => {
           <div className="md:w-1/2 relative">
             <div className="relative h-64 md:h-96 w-full rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/images/about-hero.jpg"
+                src="/images/security.svg"
                 alt="Sécurité ERB-BTP"
                 fill
                 className="object-cover"
