@@ -92,18 +92,6 @@ const ContactInfo: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-400 text-sm hover:text-yellow-600 dark:hover:text-yellow-300 transition-colors duration-300">ali.tombari@erb-btp.fr</p>
             </div>
           </div>
-          
-          <div className="flex items-center p-4 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-[1.02] cursor-pointer">
-            <div className="mr-4">
-              <div className="h-14 w-14 rounded-full bg-yellow-100 dark:bg-yellow-900 flex items-center justify-center shadow-md border-2 border-yellow-200 dark:border-yellow-800">
-                <span className="text-xl font-bold text-yellow-600 dark:text-yellow-300">YE</span>
-              </div>
-            </div>
-            <div>
-              <h5 className="font-medium text-gray-900 dark:text-white text-lg">Yasin ELMATIAR</h5>
-              <p className="text-gray-600 dark:text-gray-400 text-sm hover:text-yellow-600 dark:hover:text-yellow-300 transition-colors duration-300">yasin.elmatiar@erb-btp.fr</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
