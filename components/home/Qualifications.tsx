@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
+import Link from 'next/link';
 
 interface Qualification {
   code: string;
@@ -147,6 +148,31 @@ const Qualifications: React.FC = () => {
             </div>
           </div>
         )}
+        
+        {/* Quality, Safety, Environment Buttons */}
+        <div className="mt-12 text-center">
+          <h3 className="text-xl font-semibold mb-6 text-black dark:text-white">Nos Engagements</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              href="/qualite"
+              className="inline-flex items-center px-6 py-3 bg-[#ff914d] text-white font-medium rounded-lg hover:bg-[#e67e35] dark:bg-[#ff914d] dark:hover:bg-[#ffb583] transition-colors duration-300"
+            >
+              Qualité
+            </Link>
+            <Link 
+              href="/securite"
+              className="inline-flex items-center px-6 py-3 bg-[#ff914d] text-white font-medium rounded-lg hover:bg-[#e67e35] dark:bg-[#ff914d] dark:hover:bg-[#ffb583] transition-colors duration-300"
+            >
+              Sécurité
+            </Link>
+            <Link 
+              href="/environnement"
+              className="inline-flex items-center px-6 py-3 bg-[#ff914d] text-white font-medium rounded-lg hover:bg-[#e67e35] dark:bg-[#ff914d] dark:hover:bg-[#ffb583] transition-colors duration-300"
+            >
+              Environnement
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );

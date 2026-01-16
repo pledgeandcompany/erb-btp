@@ -23,29 +23,68 @@ const ServicesHero: React.FC = () => {
               Notre équipe d&#39;experts met son savoir-faire à votre service pour des réalisations de qualité.
             </p>
             
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              <a href="#construction" className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
-                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium">Construction</span>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+              {/* Existing Services */}
+              <a href="#construction" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Construction</span>
               </a>
-              <a href="#renovation" className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
-                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium">Rénovation</span>
+              <a href="#renovation" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Rénovation</span>
               </a>
-              <a href="#etancheite" className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
-                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium">Étanchéité</span>
+              <a href="#etancheite" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Étanchéité</span>
               </a>
-              <a href="#isolation" className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
-                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium">Isolation</span>
+              <a href="#isolation" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Isolation</span>
               </a>
-              <a href="#facades" className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
-                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium">Façades</span>
+              <a href="#facades" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Façades</span>
               </a>
-              <a href="#exterieur" className="flex items-center p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
-                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium">Extérieur</span>
+              <a href="#exterieur" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Extérieur</span>
+              </a>
+              
+              {/* New UTB Services */}
+              <a href="#couverture" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Couverture</span>
+              </a>
+              <a href="#charpente" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Charpente</span>
+              </a>
+              <a href="#ornementation" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Ornementation</span>
+              </a>
+              <a href="#electricite" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Électricité</span>
+              </a>
+              <a href="#plomberie" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Plomberie</span>
+              </a>
+              <a href="#cvc" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">CVC</span>
+              </a>
+              <a href="#serrurerie-metallerie" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Serrurerie</span>
+              </a>
+              <a href="#pierre-de-taille-marbrerie" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Pierre/Marbre</span>
+              </a>
+              <a href="#bardage" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Bardage</span>
+              </a>
+              <a href="#murs-ossature-bois" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Ossature Bois</span>
+              </a>
+              <a href="#traitement-amiante" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Amiante</span>
+              </a>
+              <a href="#gros-oeuvre" className="flex items-center p-2 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-[#fff1e8] dark:hover:bg-[#5e3520] transition-colors group">
+                <span className="text-gray-800 dark:text-white group-hover:text-[#ff914d] dark:group-hover:text-[#ff914d] font-medium text-sm">Gros Œuvre</span>
               </a>
             </div>
             
             <Button href="/contact" size="lg">
-              Demander un devis gratuit
+              Demander un devis
             </Button>
           </div>
           

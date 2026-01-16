@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
-import { ArrowDown, ChevronRight, Volume2, VolumeX } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface HeroProps {
@@ -23,44 +23,20 @@ const Hero: React.FC<HeroProps> = ({
   primaryButtonHref,
   secondaryButtonText,
   secondaryButtonHref,
-  imageSrc, // We'll keep this as a fallback for browsers that don't support video
+  imageSrc,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     setIsLoaded(true);
-    
-    // Ensure video plays automatically
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      videoElement.play().catch(error => {
-        console.log('Auto-play was prevented:', error);
-      });
-    }
   }, []);
 
-  const scrollToContent = () => {
-    window.scrollTo({
-      top: window.innerHeight * 0.8,
-      behavior: 'smooth'
-    });
-  };
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(!isMuted);
-    }
-  };
 
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <video
-          ref={videoRef}
           className="absolute w-full h-full object-cover"
           autoPlay
           loop
@@ -151,31 +127,6 @@ const Hero: React.FC<HeroProps> = ({
           </motion.div>
         </div>
       </div>
-      
-      {/* Video controls */}
-      <motion.button
-        className="absolute bottom-8 right-8 z-20 bg-black/30 hover:bg-black/50 p-3 rounded-full text-white transition-all duration-300"
-        onClick={toggleMute}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.7 }}
-        whileHover={{ opacity: 1 }}
-        title={isMuted ? "Unmute video" : "Mute video"}
-      >
-        {isMuted ? <Volume2 size={18} /> : <VolumeX size={18} />}
-      </motion.button>
-      
-      {/* Scroll indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer hidden md:flex flex-col items-center z-20"
-        onClick={scrollToContent}
-        initial={{ opacity: 0, y: -10 }}
-        animate={isLoaded ? { opacity: 0.8, y: 0 } : {}}
-        transition={{ duration: 0.6, delay: 1 }}
-        whileHover={{ opacity: 1, y: 5 }}
-      >
-        <span className="text-sm text-white mb-2 drop-shadow-md">Découvrir</span>
-        <ArrowDown className="w-5 h-5 text-white animate-bounce drop-shadow-md" />
-      </motion.div>
     </section>
   );
 };

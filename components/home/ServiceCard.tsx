@@ -8,7 +8,6 @@ import Image from 'next/image';
 interface ServiceCardProps {
   title: string;
   description: string;
-  icon?: string;
   imageSrc?: string;
   href: string;
 }
@@ -16,7 +15,6 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
-  icon,
   imageSrc,
   href,
 }) => {
@@ -35,53 +33,17 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
       )}
       <div className="p-6 flex flex-col flex-grow">
-        <div className="flex items-center mb-4">
-          {icon && <div className="text-3xl mr-3">{icon}</div>}
-          <h3 className="text-xl font-semibold text-black dark:text-white group-hover:text-[#ff914d] transition-colors duration-300">{title}</h3>
-        </div>
+        <h3 className="text-xl font-semibold text-black dark:text-white group-hover:text-[#ff914d] transition-colors duration-300">{title}</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4 flex-grow">{description}</p>
-        <Link 
-          href={href} 
-          className="inline-flex items-center text-[#ff914d] hover:text-[#e67e35] dark:text-[#ff914d] dark:hover:text-[#ffb583] font-medium opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 md:block hidden"
-          aria-label={`En savoir plus sur ${title}`}
-        >
-          En savoir plus
-          <svg 
-            className="ml-2 h-4 w-4" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
+        <div className="mt-4">
+          <Link 
+            href={href} 
+            className="inline-block px-3 py-1 bg-[#ff914d] text-white text-sm font-medium rounded-full hover:bg-[#e67e35] dark:bg-[#ff914d] dark:hover:bg-[#ffb583] transition-colors duration-300"
+            aria-label={`Voir ${title}`}
           >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M14 5l7 7m0 0l-7 7m7-7H3" 
-            />
-          </svg>
-        </Link>
-        
-        {/* Always visible on mobile */}
-        <Link 
-          href={href} 
-          className="inline-flex items-center text-[#ff914d] hover:text-[#e67e35] dark:text-[#ff914d] dark:hover:text-[#ffb583] font-medium md:hidden"
-          aria-label={`En savoir plus sur ${title}`}
-        >
-          En savoir plus
-          <svg 
-            className="ml-2 h-4 w-4" 
-            fill="none" 
-            viewBox="0 0 24 24" 
-            stroke="currentColor"
-          >
-            <path 
-              strokeLinecap="round" 
-              strokeLinejoin="round" 
-              strokeWidth={2} 
-              d="M14 5l7 7m0 0l-7 7m7-7H3" 
-            />
-          </svg>
-        </Link>
+            {title}
+          </Link>
+        </div>
       </div>
     </div>
   );

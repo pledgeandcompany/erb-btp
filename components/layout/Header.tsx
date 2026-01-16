@@ -30,13 +30,16 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/about" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
-              À propos
+              Groupe
             </Link>
             <Link href="/services" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
-              Services
+              Métiers
             </Link>
             <Link href="/projects" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
-              Projets
+              Réalisations
+            </Link>
+            <Link href="/recrutement" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
+              Recrutement
             </Link>
             <Link href="/contact" className="text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium">
               Contact
@@ -45,7 +48,7 @@ const Header: React.FC = () => {
 
           <div className="hidden md:flex items-center space-x-4">
             <Link href="/devis" className="bg-[#ff914d] hover:bg-[#e07e3d] text-white px-4 py-2 rounded-md font-medium transition-colors">
-              Devis Gratuit
+              Devis Rapide
             </Link>
           </div>
 
@@ -100,7 +103,14 @@ const Header: React.FC = () => {
               className="py-3 text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium border-b border-gray-200 dark:border-gray-700"
               onClick={() => setIsMenuOpen(false)}
             >
-              Projets
+              Réalisations
+            </Link>
+            <Link 
+              href="/recrutement" 
+              className="py-3 text-gray-600 hover:text-yellow-600 dark:text-gray-300 dark:hover:text-yellow-400 font-medium border-b border-gray-200 dark:border-gray-700"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Recrutement
             </Link>
             <Link 
               href="/contact" 

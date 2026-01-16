@@ -7,7 +7,6 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 interface Service {
   title: string;
   description: string;
-  icon?: string;
   imageSrc?: string;
   href: string;
 }
@@ -46,7 +45,6 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({ services }) => {
             key={index}
             title={service.title}
             description={service.description}
-            icon={service.icon}
             imageSrc={service.imageSrc}
             href={service.href}
           />
@@ -68,7 +66,6 @@ const ServiceCarousel: React.FC<ServiceCarouselProps> = ({ services }) => {
               <ServiceCard
                 title={service.title}
                 description={service.description}
-                icon={service.icon}
                 imageSrc={service.imageSrc}
                 href={service.href}
               />

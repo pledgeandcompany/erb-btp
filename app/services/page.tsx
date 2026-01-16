@@ -1,12 +1,23 @@
 import React from 'react';
 import ServicesHero from '@/components/services/ServicesHero';
-import ServicesIntroduction from '@/components/services/ServicesIntroduction';
 import ServiceConstruction from '@/components/services/ServiceConstruction';
 import ServiceRenovation from '@/components/services/ServiceRenovation';
 import ServiceEtancheite from '@/components/services/ServiceEtancheite';
 import ServiceIsolation from '@/components/services/ServiceIsolation';
 import ServiceFacades from '@/components/services/ServiceFacades';
 import ServiceExterieur from '@/components/services/ServiceExterieur';
+import Couverture from '@/components/services/Couverture';
+import Charpente from '@/components/services/Charpente';
+import Ornementation from '@/components/services/Ornementation';
+import Electricite from '@/components/services/Electricite';
+import Plomberie from '@/components/services/Plomberie';
+import CVC from '@/components/services/CVC';
+import SerrurerieMetallerie from '@/components/services/SerrurerieMetallerie';
+import PierreDeTailleMarbrerie from '@/components/services/PierreDeTailleMarbrerie';
+import Bardage from '@/components/services/Bardage';
+import MursOssatureBois from '@/components/services/MursOssatureBois';
+import TraitementAmiante from '@/components/services/TraitementAmiante';
+import GrosOeuvre from '@/components/services/GrosOeuvre';
 import { Button } from '@/components/ui/Button';
 
 export const metadata = {
@@ -20,9 +31,6 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <ServicesHero />
       
-      {/* Services Introduction */}
-      <ServicesIntroduction />
-      
       {/* Individual Service Sections */}
       <ServiceConstruction />
       <ServiceRenovation />
@@ -30,6 +38,20 @@ export default function ServicesPage() {
       <ServiceIsolation />
       <ServiceFacades />
       <ServiceExterieur />
+      
+      {/* Additional UTB Services */}
+      <Couverture />
+      <Charpente />
+      <Ornementation />
+      <Electricite />
+      <Plomberie />
+      <CVC />
+      <SerrurerieMetallerie />
+      <PierreDeTailleMarbrerie />
+      <Bardage />
+      <MursOssatureBois />
+      <TraitementAmiante />
+      <GrosOeuvre />
       
       {/* CTA Section */}
       <section className="py-16 bg-white dark:bg-gray-900">

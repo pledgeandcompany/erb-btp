@@ -57,11 +57,6 @@ const Collaborations: React.FC = () => {
             </div>
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400 italic max-w-2xl mx-auto">
-            ERB-BTP est fier de collaborer avec ces partenaires de confiance pour offrir des services de construction et rénovation de la plus haute qualité.
-          </p>
-        </div>
       </div>
     </section>
   );

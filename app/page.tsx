@@ -3,11 +3,12 @@ import SectionTitle from '@/components/ui/SectionTitle';
 import ProjectCarousel from '@/components/ui/ProjectCarousel';
 import Qualifications from '@/components/home/Qualifications';
 import Collaborations from '@/components/home/Collaborations';
-import ServiceCarousel from '@/components/ui/ServiceCarousel';
+import About from '@/components/home/About';
 import { Button } from '@/components/ui/Button';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import { generateMetadata } from '@/lib/seo-utils';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = generateMetadata({
   title: 'ERB-BTP | Construction et Rénovation à Paris et Île-de-France',
@@ -29,39 +30,75 @@ export default function Home() {
   const services = [
     {
       title: "Maçonnerie générale",
-      description: "Construction de murs, fondations, et structures en béton armé pour tous types de bâtiments.",
-      icon: "🏗️",
       href: "/services#construction",
     },
     {
       title: "Rénovation",
-      description: "Rénovation complète ou partielle de bâtiments résidentiels et commerciaux.",
-      icon: "🔨",
       href: "/services#renovation",
     },
     {
       title: "Gros œuvre",
-      description: "Réalisation de l'ensemble des travaux de structure et d'enveloppe du bâtiment.",
-      icon: "🏢",
       href: "/services#construction",
     },
     {
       title: "Aménagement extérieur",
-      description: "Création de terrasses, allées, et aménagements paysagers pour valoriser votre propriété.",
-      icon: "🌳",
       href: "/services#exterieur",
     },
     {
       title: "Isolation thermique",
-      description: "Solutions d'isolation performantes pour améliorer l'efficacité énergétique de votre bâtiment.",
-      icon: "❄️",
       href: "/services#isolation",
     },
     {
       title: "Étanchéité",
-      description: "Travaux d'étanchéité pour toitures, terrasses et fondations contre les infiltrations d'eau.",
-      icon: "💧",
       href: "/services#etancheite",
+    },
+    {
+      title: "Ravalement de façades",
+      href: "/services#facades",
+    },
+    {
+      title: "Couverture",
+      href: "/services#couverture",
+    },
+    {
+      title: "Charpente",
+      href: "/services#charpente",
+    },
+    {
+      title: "Ornementation",
+      href: "/services#ornementation",
+    },
+    {
+      title: "Électricité",
+      href: "/services#electricite",
+    },
+    {
+      title: "Plomberie",
+      href: "/services#plomberie",
+    },
+    {
+      title: "CVC (Chauffage, Ventilation, Climatisation)",
+      href: "/services#cvc",
+    },
+    {
+      title: "Serrurerie et métallerie",
+      href: "/services#serrurerie",
+    },
+    {
+      title: "Pierre de taille et marbrerie",
+      href: "/services#pierre",
+    },
+    {
+      title: "Bardage",
+      href: "/services#bardage",
+    },
+    {
+      title: "Murs ossature bois",
+      href: "/services#ossature-bois",
+    },
+    {
+      title: "Traitement amiante",
+      href: "/services#amiante",
     },
   ];
 
@@ -97,6 +134,12 @@ export default function Home() {
         primaryButtonHref="/services"
         imageSrc="/images/hero-construction.png"
       />
+      
+      {/* About Section */}
+      <About />
+      
+      {/* Collaborations Section */}
+      <Collaborations />
 
       {/* Services Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
@@ -106,12 +149,23 @@ export default function Home() {
             subtitle="ERB-BTP vous propose une gamme complète de services pour tous vos projets de construction et rénovation."
           />
           
-          <ServiceCarousel services={services} />
+          <div className="grid grid-cols-4 gap-3">
+            {services.map((service, index) => (
+              <Link
+                key={index}
+                href={service.href}
+                className="group relative overflow-hidden rounded-lg shadow-md bg-white dark:bg-gray-800 p-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border border-gray-100 dark:border-gray-700 text-center"
+                aria-label={`Voir ${service.title}`}
+              >
+                <span className="inline-block text-xs font-medium text-gray-900 dark:text-white group-hover:text-[#ff914d] transition-colors duration-300">
+                  {service.title}
+                </span>
+                <div className="h-1 w-0 bg-[#ff914d] group-hover:w-full transition-all duration-300 mt-2"></div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
-
-      {/* Qualifications Section */}
-      <Qualifications />
 
       {/* Projects Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
@@ -135,8 +189,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Collaborations Section */}
-      <Collaborations />
+      {/* Qualifications Section */}
+      <Qualifications />
 
       {/* Contact CTA Section */}
       <section className="py-16 bg-white dark:bg-gray-900">
